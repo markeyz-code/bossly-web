@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#F5D547"/>
+  <circle cx="160" cy="170" r="120" fill="#FF5A1F" opacity=".9"/>
+  <path d="M180 560q20-220 220-220t220 220Z" fill="#1F4FD8"/>
+  <path d="M180 560h440l-44 70H224Z" fill="#06231A"/>
+  <path d="M390 350h20v210h-20Z" fill="#FBF7EF" opacity=".45"/>
+  <circle cx="400" cy="345" r="16" fill="#FBF7EF"/>
+  <text x="60" y="930" fill="#06231A" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="6">VINTAGE WASH CAP</text>
+  <text x="60" y="82" fill="#06231A" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">TOLA THRIFT / 02</text>
+</svg>

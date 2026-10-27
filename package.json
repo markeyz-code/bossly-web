@@ -1,0 +1,36 @@
+{
+  "name": "@bossly/web-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --port 3100",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "start": "node .output/server/index.mjs",
+    "lint": "nuxt typecheck",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "@pinia/nuxt": "0.11.2",
+    "@vercel/functions": "^2.2.13",
+    "@vite-pwa/nuxt": "0.10.0",
+    "axios": "^1.8.4",
+    "lucide-vue-next": "0.468.0",
+    "nuxt": "3.21.11",
+    "pinia": "3.0.4",
+    "vue": "^3.5.24",
+    "vue-router": "^4.5.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.10"
+  }
+}

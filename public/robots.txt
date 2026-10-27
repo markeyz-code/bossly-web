@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /app
+Disallow: /app/
+Disallow: /receipt/
+Disallow: /invoice/
+Disallow: /order/
+Disallow: /pay/
+Disallow: /payment/
+Disallow: /embed/
+Disallow: /api/

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF5A1F"/><stop offset="1" stop-color="#E8450D"/></linearGradient></defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="640" cy="220" r="190" fill="#F5D547" opacity=".9"/>
+  <path d="M214 353 352 232q45-35 96 0l138 121 104 148-96 68-48-67v359H254V502l-48 67-96-68Z" fill="#06231A"/>
+  <path d="M330 274q70 95 140 0l-22-22q-48 43-96 0Z" fill="#FBF7EF"/>
+  <path d="M338 717h124v24H338Zm0-52h124v24H338Z" fill="#FBF7EF" opacity=".45"/>
+  <text x="60" y="930" fill="#FBF7EF" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="6">OVERSIZED CAMPUS HOODIE</text>
+  <text x="60" y="82" fill="#06231A" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">TOLA THRIFT / 01</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <rect width="900" height="900" fill="#E9E2D3"/>
+  <rect x="80" y="180" width="740" height="520" rx="20" fill="#06231A"/>
+  <rect x="130" y="240" width="270" height="410" rx="10" fill="#FF5A1F"/>
+  <rect x="430" y="240" width="340" height="150" rx="10" fill="#F5D547"/>
+  <rect x="430" y="420" width="340" height="230" rx="10" fill="#FBF7EF"/>
+  <path d="M180 640h170M180 680h110" stroke="#FBF7EF" stroke-width="10"/>
+  <text x="470" y="335" fill="#06231A" font-family="Arial, sans-serif" font-size="38" font-weight="900">PACKED</text>
+  <text x="470" y="378" fill="#06231A" font-family="Arial, sans-serif" font-size="38" font-weight="900">WITH CARE</text>
+  <text x="470" y="480" fill="#06231A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">BY HAND, BY TOLA</text>
+  <text x="470" y="560" fill="#06231A" font-family="Arial, sans-serif" font-size="14">Every order gets a little</text>
+  <text x="470" y="584" fill="#06231A" font-family="Arial, sans-serif" font-size="14">surprise. Every Friday.</text>
+  <text x="80" y="110" fill="#06231A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">THE UNILAG HOSTEL STORY</text>
+</svg>

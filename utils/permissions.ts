@@ -1,0 +1,20 @@
+export const PERMISSION_OPTIONS = [
+  { key: 'products:read', label: 'View products' },
+  { key: 'products:write', label: 'Add & edit products' },
+  { key: 'stock:read', label: 'View stock' },
+  { key: 'stock:write', label: 'Restock & adjust' },
+  { key: 'orders:read', label: 'View orders' },
+  { key: 'orders:write', label: 'Manage orders' },
+  { key: 'sales:read', label: 'View sales' },
+  { key: 'sales:write', label: 'Record sales' },
+  { key: 'customers:read', label: 'View customers' },
+  { key: 'customers:write', label: 'Edit customers' },
+  { key: 'debts:read', label: 'View debts' },
+  { key: 'debts:write', label: 'Record debt payments' },
+  { key: 'expenses:read', label: 'View expenses' },
+  { key: 'expenses:write', label: 'Add expenses' },
+  { key: 'reports:read', label: 'View reports' },
+  { key: 'website:manage', label: 'Manage website' },
+  { key: 'whatsapp:manage', label: 'Manage WhatsApp' },
+];
+export const STAFF_DEFAULT = PERMISSION_OPTIONS.filter((p) => !['website:manage', 'whatsapp:manage'].includes(p.key)).map((p) => p.key);

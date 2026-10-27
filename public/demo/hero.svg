@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+  <rect width="1400" height="1000" fill="#FBF7EF"/>
+  <rect x="60" y="60" width="620" height="880" rx="32" fill="#FF5A1F"/>
+  <rect x="710" y="60" width="630" height="410" rx="32" fill="#F5D547"/>
+  <rect x="710" y="500" width="630" height="440" rx="32" fill="#06231A"/>
+  <circle cx="360" cy="380" r="220" fill="#FBF7EF" opacity=".15"/>
+  <path d="M230 330 330 250q50-38 100 0l100 80 75 105-70 50-35-48v260H260V437l-35 48-70-50Z" fill="#06231A"/>
+  <text x="100" y="870" fill="#FBF7EF" font-family="Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="5">FRIDAY DROP / LAGOS</text>
+  <text x="760" y="250" fill="#06231A" font-family="Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-2">CAMPUS FITS.</text>
+  <text x="760" y="315" fill="#06231A" font-family="Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-2">THRIFT PRICES.</text>
+  <text x="760" y="620" fill="#F5D547" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="6">SMALL BATCH / BIG ENERGY</text>
+  <text x="760" y="840" fill="#FBF7EF" font-family="Arial, sans-serif" font-size="74" font-weight="900" letter-spacing="-3">TOLA THRIFT</text>
+</svg>

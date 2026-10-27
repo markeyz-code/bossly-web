@@ -1,0 +1,119 @@
+
+const vercelBuild = Boolean(process.env.VERCEL);
+const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:4100/api/v1';
+const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || 'http://localhost:3100';
+if (vercelBuild) {
+  if (!/^https:\/\//.test(publicApiBase)) throw new Error('NUXT_PUBLIC_API_BASE must be an HTTPS API URL on Vercel.');
+  if (!/^https:\/\//.test(publicAppUrl)) throw new Error('NUXT_PUBLIC_APP_URL must be the HTTPS web origin on Vercel.');
+  if (!process.env.NUXT_PUBLIC_ADMIN_URL || !/^https:\/\//.test(process.env.NUXT_PUBLIC_ADMIN_URL)) throw new Error('NUXT_PUBLIC_ADMIN_URL must be the HTTPS admin origin on Vercel.');
+}
+
+export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: false },
+  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@vite-pwa/nuxt'],
+  components: [{ path: '~/components', pathPrefix: false }],
+  css: [
+    '@fontsource-variable/space-grotesk/index.css',
+    '@fontsource-variable/dm-sans/index.css',
+    '@fontsource-variable/fraunces/index.css',
+    '@fontsource-variable/bricolage-grotesque/index.css',
+    '~/assets/css/main.css',
+  ],
+  runtimeConfig: {
+    public: {
+      apiBase: publicApiBase,
+      appUrl: publicAppUrl,
+      rootDomain: process.env.NUXT_PUBLIC_ROOT_DOMAIN || 'bossly.ng',
+      paystackPublicKey: process.env.NUXT_PUBLIC_PAYSTACK_PUBLIC_KEY || '',
+      adminUrl: process.env.NUXT_PUBLIC_ADMIN_URL || 'http://localhost:3101',
+    },
+  },
+  app: {
+    head: {
+      htmlAttrs: { lang: 'en-NG' },
+      title: 'Bossly — run your student business. Get a free website.',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
+        { name: 'theme-color', content: '#06231A' },
+        { name: 'description', content: 'Bossly is the business management system for Nigerian student entrepreneurs. Track profit, stock, debts and expenses — and get an auto-generated storefront for free.' },
+        { property: 'og:site_name', content: 'Bossly' },
+        { property: 'og:type', content: 'website' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      ],
+      link: [
+        { rel: 'manifest', href: '/manifest.webmanifest' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+        { rel: 'apple-touch-icon', href: '/pwa-192.png' },
+      ],
+    },
+  },
+  tailwindcss: { cssPath: '~/assets/css/main.css', configPath: '~/tailwind.config.ts', viewer: false },
+  routeRules: {
+    '/app/**': { ssr: false, headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/receipt/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/invoice/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/order/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/pay/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/payment/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/impersonate': { ssr: false, headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/embed/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+    '/login': { ssr: false },
+    '/register': { ssr: false },
+    '/forgot-password': { ssr: false },
+    '/reset-password': { ssr: false },
+    '/verify-email': { ssr: false },
+    '/offline': { prerender: true },
+    '/s/**/cart': { ssr: false },
+    '/s/**/checkout': { ssr: false },
+  },
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Bossly — business, handled',
+      short_name: 'Bossly',
+      description: 'Run your student business and get a free website.',
+      theme_color: '#06231A',
+      background_color: '#FBF7EF',
+      display: 'standalone',
+      orientation: 'portrait',
+      start_url: '/app',
+      scope: '/',
+      icons: [
+        { src: '/pwa-192.png', sizes: '192x192', type: 'image/png' },
+        { src: '/pwa-512.png', sizes: '512x512', type: 'image/png' },
+        { src: '/pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+      ],
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+      runtimeCaching: [
+        {
+          urlPattern: /^https?:\/\/[^/]+\/(?!api\/|_nuxt\/|__nuxt|embed\/|sw\.js|workbox|favicon|pwa-|.*\.[a-z0-9]{2,5}(?:\?|$)).*/i,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'bossly-pages',
+            networkTimeoutSeconds: 5,
+            expiration: { maxEntries: 40, maxAgeSeconds: 86400 },
+            precacheFallback: { fallbackURL: '/offline' },
+          },
+        },
+        {
+          urlPattern: /^https:\/\/res\.cloudinary\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: { cacheName: 'bossly-images', expiration: { maxEntries: 100, maxAgeSeconds: 2592000 } },
+        },
+        {
+          urlPattern: /\/api\/v1\/(storefront|plans|public)\/.*/i,
+          handler: 'NetworkFirst',
+          options: { cacheName: 'bossly-public-api', networkTimeoutSeconds: 4, expiration: { maxEntries: 50, maxAgeSeconds: 3600 } },
+        },
+      ],
+    },
+    devOptions: { enabled: false },
+  },
+  typescript: { strict: true, typeCheck: false },
+  nitro: { compressPublicAssets: true },
+});
