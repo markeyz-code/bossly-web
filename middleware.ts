@@ -1,5 +1,7 @@
 import { next, rewrite } from '@vercel/functions';
 
+declare const process: { env: Record<string, string | undefined> };
+
 /**
  * Vercel Routing Middleware (runs before Nitro).
  *
