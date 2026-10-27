@@ -1,6 +1,6 @@
-import { BaseApi } from '../base/BaseApi';
+import { BaseApi } from '~/api/base/BaseApi';
 import type { Order } from '~/types';
-import type { OrderPayload } from '../types';
+import type { OrderPayload } from '~/api/types';
 
 class OrdersApi extends BaseApi {
   constructor() { super('/orders'); }

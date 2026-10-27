@@ -1,6 +1,6 @@
 import { http } from '~/config/axios';
 import type { AuthSession, User } from '~/types';
-import type { LoginPayload, RegisterPayload } from '../types';
+import type { LoginPayload, RegisterPayload } from '~/api/types';
 
 async function unwrap<T>(promise: Promise<{ data: { data: T } }>): Promise<T> {
   const response = await promise;

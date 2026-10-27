@@ -1,5 +1,5 @@
-import { BaseApi } from '../base/BaseApi';
-import type { OrderPayload } from '../types';
+import { BaseApi } from '~/api/base/BaseApi';
+import type { OrderPayload } from '~/api/types';
 
 class WhatsappApi extends BaseApi {
   constructor() { super('/whatsapp'); }

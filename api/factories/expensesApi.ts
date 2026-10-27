@@ -1,4 +1,4 @@
-import { BaseApi } from '../base/BaseApi';
+import { BaseApi } from '~/api/base/BaseApi';
 import type { Expense } from '~/types';
 
 class ExpensesApi extends BaseApi {

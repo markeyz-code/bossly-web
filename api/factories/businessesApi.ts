@@ -1,4 +1,4 @@
-import { BaseApi } from '../base/BaseApi';
+import { BaseApi } from '~/api/base/BaseApi';
 import type { Business, BusinessContext, Onboarding, StaffMember } from '~/types';
 
 class BusinessesApi extends BaseApi {

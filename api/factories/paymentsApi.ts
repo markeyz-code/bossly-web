@@ -1,4 +1,4 @@
-import { BaseApi } from '../base/BaseApi';
+import { BaseApi } from '~/api/base/BaseApi';
 import type { PaymentLinkResult } from '~/types';
 
 class PaymentsApi extends BaseApi {

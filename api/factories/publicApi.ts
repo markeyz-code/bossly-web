@@ -1,4 +1,4 @@
-import { BaseApi } from '../base/BaseApi';
+import { BaseApi } from '~/api/base/BaseApi';
 import type { Invoice, Order, Receipt, StorefrontHome, StorefrontProduct, StorefrontTemplate } from '~/types';
 
 class PublicApi extends BaseApi {

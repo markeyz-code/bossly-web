@@ -1,3 +1,24 @@
 {
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "#imports": [".nuxt/imports"],
+      "#build": [".nuxt"],
+      "#build/*": [".nuxt/*"]
+    },
+    "strict": false,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "exclude": [
+    "node_modules",
+    ".output",
+    "dist"
+  ]
 }
