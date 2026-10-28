@@ -1,4 +1,4 @@
-# Bossly web app
+# Ojaly web app
 
 Nuxt 3 + TypeScript + Tailwind + Pinia PWA for business owners and their customers.
 
@@ -12,9 +12,9 @@ pnpm dev:web
 ```
 
 - App: http://localhost:3100
-- Production build: `pnpm --filter @bossly/web-app build`
+- Production build: `pnpm --filter @ojaly/web-app build`
 - Preview: `PORT=3100 node .output/server/index.mjs`
-- Typecheck: `pnpm --filter @bossly/web-app lint`
+- Typecheck: `pnpm --filter @ojaly/web-app lint`
 
 The API must be running (default `http://localhost:4100/api/v1`).
 
@@ -24,7 +24,7 @@ The API must be running (default `http://localhost:4100/api/v1`).
 | --- | --- |
 | `NUXT_PUBLIC_API_BASE` | Backend API base URL |
 | `NUXT_PUBLIC_APP_URL` | Public origin used in OG images/links |
-| `NUXT_PUBLIC_ROOT_DOMAIN` | e.g. `bossly.ng` for subdomain routing |
+| `NUXT_PUBLIC_ROOT_DOMAIN` | e.g. `ojaly.ng` for subdomain routing |
 | `NUXT_PUBLIC_ADMIN_URL` | admin console URL used by the impersonation exit banner |
 | `NUXT_PUBLIC_PAYSTACK_PUBLIC_KEY` | optional, exposed for future inline checkout |
 
@@ -69,7 +69,7 @@ Nuxt root
 - **Notifications & offline queue** `/app/notifications`, `/app/offline`
 - **Storefront** `/s/{slug}`, `/products`, `/products/:id`, `/cart`, `/checkout`, `/about`, `/contact`
 - **Public documents/payment** `/receipt/:token`, `/invoice/:token`, `/order/:token`, `/pay/debt/:token`, `/pay/invoice/:token`, `/payment/callback`
-- **Embed** `/embed/order?b={slug}` + `/embed/bossly-widget.js`
+- **Embed** `/embed/order?b={slug}` + `/embed/ojaly-widget.js`
 
 ## Storefront
 
@@ -95,8 +95,8 @@ Design tokens in `tailwind.config.ts`; CSS variables for light/dark in `assets/c
 ## Tests/build
 
 ```bash
-pnpm --filter @bossly/web-app lint
-pnpm --filter @bossly/web-app build
+pnpm --filter @ojaly/web-app lint
+pnpm --filter @ojaly/web-app build
 ```
 
 Manual smoke flows validated in development: login → dashboard → all modules, storefront product → cart → checkout, website builder live preview, PWA offline queue → reconnect sync, admin console reads/writes.

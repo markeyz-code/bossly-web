@@ -121,7 +121,7 @@ onMounted(async () => {
       <NuxtLink to="/app" class="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface hover:bg-raised" aria-label="Back"><ArrowLeft class="h-4 w-4" /></NuxtLink>
       <div><p class="eyebrow">{{ onboarding ? 'Step 3 of 3' : 'Sales' }}</p><h1 class="font-display text-3xl font-bold tracking-tight">Record a sale</h1></div>
     </div>
-    <div v-if="onboarding" class="rounded-2xl border border-success/30 bg-success/5 p-4 text-sm font-medium text-success">Almost there. Record one real sale and Bossly will show you exactly what you made.</div>
+    <div v-if="onboarding" class="rounded-2xl border border-success/30 bg-success/5 p-4 text-sm font-medium text-success">Almost there. Record one real sale and Ojaly will show you exactly what you made.</div>
 
     <div class="grid gap-5 xl:grid-cols-[1.35fr_1fr]" data-tour="sale-form">
       <div class="space-y-5">

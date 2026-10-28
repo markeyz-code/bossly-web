@@ -40,7 +40,7 @@ export function setupHttp(url: string): AxiosInstance {
           return instance!.request(config);
         }
         tokenStorage.clear();
-        if (import.meta.client) window.dispatchEvent(new CustomEvent('bossly:session-expired'));
+        if (import.meta.client) window.dispatchEvent(new CustomEvent('ojaly:session-expired'));
         return Promise.reject(normalizeError(error));
       }
 
@@ -77,7 +77,7 @@ async function refreshAccessToken(url: string): Promise<boolean> {
         { timeout: 20000, headers: { 'Content-Type': 'application/json' } },
       );
       tokenStorage.set(response.data.data.accessToken, response.data.data.refreshToken);
-      if (import.meta.client) window.dispatchEvent(new CustomEvent('bossly:auth-refreshed'));
+      if (import.meta.client) window.dispatchEvent(new CustomEvent('ojaly:auth-refreshed'));
       return true;
     } catch {
       return false;

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import type { CartItem } from '~/types';
 
-const KEY = 'bossly.cart.v1';
+const KEY = 'ojaly.cart.v1';
 
 export const useCartStore = defineStore('cart', () => {
   const items = ref<CartItem[]>([]);

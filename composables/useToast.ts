@@ -6,7 +6,7 @@ export interface ToastItem {
 }
 
 export function useToast() {
-  const toasts = useState<ToastItem[]>('bossly-toasts', () => []);
+  const toasts = useState<ToastItem[]>('ojaly-toasts', () => []);
 
   function dismiss(id: string) {
     toasts.value = toasts.value.filter((t) => t.id !== id);

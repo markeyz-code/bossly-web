@@ -57,8 +57,8 @@
   }
   .text-balance { text-wrap: balance; }
   .skeleton { @apply animate-pulse rounded-xl bg-raised; }
-  .prose-bossly p { @apply mb-4 leading-relaxed; }
-  .prose-bossly a { @apply text-brand underline underline-offset-4; }
+  .prose-ojaly p { @apply mb-4 leading-relaxed; }
+  .prose-ojaly a { @apply text-brand underline underline-offset-4; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,7 +2,7 @@
 import { Eye, EyeOff, LockKeyhole, Mail, Sparkles } from 'lucide-vue-next';
 import { loginSchema, zodErrors } from '~/utils/validators';
 definePageMeta({ layout: 'auth' });
-useSeoMeta({ title: 'Sign in', description: 'Sign in to your Bossly business dashboard.' });
+useSeoMeta({ title: 'Sign in', description: 'Sign in to your Ojaly business dashboard.' });
 const route = useRoute();
 const router = useRouter();
 const auth = useAuth();
@@ -28,7 +28,7 @@ async function submit() {
   }
 }
 function useDemo() {
-  form.email = 'demo@bossly.ng';
+  form.email = 'demo@ojaly.ng';
   form.password = 'Demo12345';
   toast.info('Demo account filled. Tap sign in.');
 }
@@ -37,7 +37,7 @@ function useDemo() {
 <template>
   <div>
     <div class="mb-8">
-      <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-[11px] font-bold text-brand-700 dark:bg-brand-500/15 dark:text-brand-300"><Sparkles class="h-3.5 w-3.5" /> Welcome back, boss</span>
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1.5 text-[11px] font-bold text-brand-700 dark:bg-brand-500/15 dark:text-brand-300"><Sparkles class="h-3.5 w-3.5" /> Welcome back</span>
       <h1 class="mt-4 font-display text-4xl font-bold tracking-[-0.045em]">Your numbers missed you.</h1>
       <p class="mt-2 text-sm leading-relaxed text-muted">Sign in to see today's profit, stock and who owes you.</p>
     </div>
@@ -60,6 +60,6 @@ function useDemo() {
     </form>
     <div class="mt-6 flex items-center gap-3"><span class="h-px flex-1 bg-line" /><span class="text-[10px] font-bold uppercase tracking-wider text-muted">or</span><span class="h-px flex-1 bg-line" /></div>
     <button type="button" class="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-2xl border border-line bg-surface text-sm font-bold transition hover:bg-raised" @click="useDemo"><Sparkles class="h-4 w-4 text-brand-500" /> Try the demo business</button>
-    <p class="mt-6 text-center text-sm text-muted">New to Bossly? <NuxtLink to="/register" class="font-bold text-ink underline decoration-brand decoration-2 underline-offset-4">Create your business</NuxtLink></p>
+    <p class="mt-6 text-center text-sm text-muted">New to Ojaly? <NuxtLink to="/register" class="font-bold text-ink underline decoration-brand decoration-2 underline-offset-4">Create your business</NuxtLink></p>
   </div>
 </template>

@@ -15,7 +15,7 @@ function retry() { if (navigator.onLine) void navigateTo('/app'); else location.
       <p class="mt-3 text-sm leading-relaxed text-muted">Your app is still here. Sales and expenses you record now will queue on this device and sync automatically when you reconnect.</p>
       <div v-if="offline.pendingCount" class="mt-4 rounded-2xl border border-line bg-surface p-3 text-xs font-semibold">{{ offline.pendingCount }} queued {{ offline.pendingCount === 1 ? 'entry' : 'entries' }} waiting to sync.</div>
       <button class="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-2xl bg-ink px-5 text-sm font-bold text-canvas" @click="retry"><RefreshCw class="h-4 w-4" /> {{ offline.online ? 'Back to app' : 'Try again' }}</button>
-      <p class="mt-4 text-[11px] text-muted">No data lost. That's the Bossly promise.</p>
+      <p class="mt-4 text-[11px] text-muted">No data lost. That's the Ojaly promise.</p>
     </div>
   </div>
 </template>

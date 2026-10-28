@@ -24,7 +24,7 @@ export const TOURS: Tour[] = [
     color: '#FF5A1F',
     steps: [
       { route: '/app', target: 'dashboard-stats', title: 'Your truth, in four numbers', body: 'Revenue, real profit, money owed to you and stock value. Everything else on this dashboard is detail.', placement: 'bottom' },
-      { route: '/app/sales/new', target: 'sale-form', title: 'Record a sale in seconds', body: 'Pick the product, quantity and what the customer paid. Bossly handles stock, profit and any debt.', placement: 'right' },
+      { route: '/app/sales/new', target: 'sale-form', title: 'Record a sale in seconds', body: 'Pick the product, quantity and what the customer paid. Ojaly handles stock, profit and any debt.', placement: 'right' },
       { route: '/app/products/new', target: 'product-form', title: 'Your catalogue powers everything', body: 'One product becomes a storefront listing, a stock record and a line in every report.', placement: 'right' },
       { route: '/app/website', target: 'website-templates', title: 'Pick a look and publish', body: 'Your free website is built from the same catalogue. No coding, no designer.', placement: 'left' },
       { route: '/app/settings?tab=billing', target: 'billing-plans', title: 'Upgrade only when it pays', body: 'Start free. Move to Hustle or Boss when you need more room, a custom domain or exports.', placement: 'top' },
@@ -49,7 +49,7 @@ export const TOURS: Tour[] = [
     duration: '60 seconds',
     color: '#25D366',
     steps: [
-      { route: '/app/orders/paste', target: 'paste-input', title: 'Paste a real conversation', body: 'Bossly pulls out names, items, quantities, prices and the delivery address. You review before anything is saved.', placement: 'right' },
+      { route: '/app/orders/paste', target: 'paste-input', title: 'Paste a real conversation', body: 'Ojaly pulls out names, items, quantities, prices and the delivery address. You review before anything is saved.', placement: 'right' },
       { route: '/app/settings?tab=whatsapp', target: 'whatsapp-link', title: 'Link your number', body: 'Generate a code and send LINK 123456 from your WhatsApp. Then record sales by messaging the bot.', placement: 'bottom' },
       { route: '/app/orders', target: 'orders-list', title: 'Nothing gets lost', body: 'Pasted chats, bot orders and website orders all land in the same pipeline.', placement: 'top' },
     ],

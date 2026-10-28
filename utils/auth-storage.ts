@@ -1,6 +1,6 @@
-const ACCESS = 'bossly.access';
-const REFRESH = 'bossly.refresh';
-const IMPERSONATION = 'bossly.impersonation';
+const ACCESS = 'ojaly.access';
+const REFRESH = 'ojaly.refresh';
+const IMPERSONATION = 'ojaly.impersonation';
 
 export interface ImpersonationSession {
   token: string;

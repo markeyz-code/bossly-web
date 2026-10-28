@@ -5,7 +5,7 @@ import { isNetworkError } from '~/utils/errors';
 import { useToast } from '~/composables/useToast';
 import type { SalePayload } from '~/api/types';
 
-const KEY = 'bossly.offline-queue.v1';
+const KEY = 'ojaly.offline-queue.v1';
 
 export interface QueueItem {
   id: string;

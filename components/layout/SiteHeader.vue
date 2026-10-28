@@ -14,7 +14,7 @@ const links = [
 <template>
   <header class="sticky top-0 z-50 border-b border-line/70 bg-canvas/85 backdrop-blur-xl">
     <div class="shell flex h-[72px] items-center justify-between gap-4">
-      <NuxtLink to="/" aria-label="Bossly home"><LogoMark /></NuxtLink>
+      <NuxtLink to="/" aria-label="Ojaly home"><LogoMark /></NuxtLink>
       <nav class="hidden items-center gap-7 lg:flex" aria-label="Main">
         <a v-for="link in links" :key="link.href" :href="link.href" class="text-[13px] font-semibold text-muted transition hover:text-ink">{{ link.label }}</a>
       </nav>

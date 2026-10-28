@@ -19,7 +19,7 @@ useHead({ titleTemplate: '%s' });
       <p class="text-[10px] font-bold uppercase tracking-[0.18em]" :style="{ color: template.colors.primary }">Our story</p>
       <h1 class="mt-2 max-w-3xl font-display text-5xl font-bold leading-[0.95] tracking-[-0.05em] sm:text-6xl" :style="{ color: template.colors.ink }">More than a shop. Someone's dream, in progress.</h1>
       <div class="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-        <div class="prose-bossly whitespace-pre-line text-sm leading-relaxed" :style="{ color: template.colors.muted }">{{ business.about || business.description || `${business.name} is a student-owned business built with care. Every order supports the dream.` }}</div>
+        <div class="prose-ojaly whitespace-pre-line text-sm leading-relaxed" :style="{ color: template.colors.muted }">{{ business.about || business.description || `${business.name} is a student-owned business built with care. Every order supports the dream.` }}</div>
         <div class="space-y-3">
           <div class="rounded-2xl p-5" :style="{ background: template.colors.primary, color: template.colors.onPrimary, borderRadius: template.radius }">
             <Sparkles class="h-6 w-6 opacity-60" />

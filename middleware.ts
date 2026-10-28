@@ -5,7 +5,7 @@ declare const process: { env: Record<string, string | undefined> };
 /**
  * Vercel Routing Middleware (runs before Nitro).
  *
- * Custom domains and {slug}.bossly.ng hosts are transparently rewritten to the
+ * Custom domains and {slug}.ojaly.ng hosts are transparently rewritten to the
  * canonical /s/{slug} storefront route, so the customer keeps the clean host.
  * The Nuxt server middleware remains a redirect fallback for non-Vercel hosts.
  */
@@ -27,7 +27,7 @@ export default async function middleware(request: Request) {
   const host = forwarded.split(',')[0].trim().split(':')[0].toLowerCase();
   if (!host || host === 'localhost' || host === '127.0.0.1' || host.endsWith('.localhost')) return next();
 
-  const rootDomain = (process.env.NUXT_PUBLIC_ROOT_DOMAIN || 'bossly.ng').toLowerCase();
+  const rootDomain = (process.env.NUXT_PUBLIC_ROOT_DOMAIN || 'ojaly.ng').toLowerCase();
   if (host === rootDomain || host === `www.${rootDomain}`) return next();
 
   let slug: string | null = null;

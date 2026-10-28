@@ -12,7 +12,7 @@ const detailsOpen = ref(false);
 const details = reactive({ bankName: '', accountName: '', accountNumber: '' });
 const payout = reactive({ amount: '' });
 const statusVariant: Record<string, 'success' | 'warning' | 'danger' | 'neutral'> = { paid: 'success', requested: 'warning', rejected: 'danger', pending: 'warning', available: 'success', converted: 'success', registered: 'neutral' };
-const shareText = computed(() => affiliate.data.value ? `I run ${auth.activeBusiness?.name || 'my business'} on Bossly — real profit, stock and a free website. Use my code ${affiliate.data.value.code} when you sign up: ${affiliate.data.value.link}` : '');
+const shareText = computed(() => affiliate.data.value ? `I run ${auth.activeBusiness?.name || 'my business'} on Ojaly — real profit, stock and a free website. Use my code ${affiliate.data.value.code} when you sign up: ${affiliate.data.value.link}` : '');
 
 async function copy(value: string, message = 'Copied.') {
   try { await navigator.clipboard.writeText(value); toast.success(message); }
@@ -21,7 +21,7 @@ async function copy(value: string, message = 'Copied.') {
 async function share() {
   if (!affiliate.data.value) return;
   if (navigator.share) {
-    try { await navigator.share({ title: 'Bossly', text: shareText.value, url: affiliate.data.value.link }); return; } catch { /* fall through */ }
+    try { await navigator.share({ title: 'Ojaly', text: shareText.value, url: affiliate.data.value.link }); return; } catch { /* fall through */ }
   }
   await copy(shareText.value, 'Referral message copied.');
 }
@@ -58,7 +58,7 @@ onMounted(async () => {
 
 <template>
   <div class="space-y-5">
-    <PageHeader title="Refer & earn" subtitle="Share Bossly with another student business. Earn 20% of their first payment." eyebrow="Grow together">
+    <PageHeader title="Refer & earn" subtitle="Share Ojaly with another student business. Earn 20% of their first payment." eyebrow="Grow together">
       <template #actions><BaseButton variant="outline" :disabled="!affiliate.data.value" @click="share"><Share2 class="h-4 w-4" /> Share invite</BaseButton></template>
     </PageHeader>
 

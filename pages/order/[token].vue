@@ -53,7 +53,7 @@ async function payBalance() {
             <p v-if="payError" class="mt-2 text-[11px] text-danger">{{ payError }}</p>
           </div>
           <a v-if="wa" :href="wa" target="_blank" rel="noopener" class="mt-5 flex min-h-[50px] items-center justify-center gap-2 rounded-full bg-[#25D366] text-sm font-bold text-forest-900"><MessageCircle class="h-4 w-4" /> Message {{ business.name }}</a>
-          <p class="mt-4 text-center text-[10px] text-muted">Tracking link provided by {{ business.name }}. Powered by Bossly.</p>
+          <p class="mt-4 text-center text-[10px] text-muted">Tracking link provided by {{ business.name }}. Powered by Ojaly.</p>
         </div>
       </div>
     </div>

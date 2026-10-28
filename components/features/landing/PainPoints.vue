@@ -27,7 +27,7 @@ const pains = [
       </div>
       <div class="mt-12 flex items-center justify-center gap-3 rounded-3xl border border-ink bg-accent px-5 py-4 text-center text-sm font-bold text-forest-900 sm:mt-16 sm:text-base">
         <BatteryLow class="h-5 w-5 shrink-0" />
-        <p>One place for sales, stock, debts and profit. That’s Bossly.</p>
+        <p>One place for sales, stock, debts and profit. That’s Ojaly.</p>
         <ReceiptText class="hidden h-5 w-5 sm:block" />
       </div>
     </div>

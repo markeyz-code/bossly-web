@@ -20,7 +20,7 @@ const auth = useAuthStore();
           </span>
         </h1>
         <p class="mt-7 max-w-lg text-balance text-base leading-relaxed text-muted sm:text-lg">
-          Bossly is the management system that shows you real profit, tracks stock and debts, and turns your catalog into a free online store. No designer. No developer. No guessing.
+          Ojaly is the management system that shows you real profit, tracks stock and debts, and turns your catalog into a free online store. No designer. No developer. No guessing.
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <BaseButton :to="auth.isAuthenticated ? '/app' : '/register'" size="lg" class="group">

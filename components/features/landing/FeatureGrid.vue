@@ -5,7 +5,7 @@ const features = [
   { icon: BarChart3, title: 'Real profit, not guesses', body: 'Revenue minus cost of goods minus expenses. Today, this week, this month. Plain language, big numbers.' },
   { icon: Boxes, title: 'Stock that counts itself', body: 'Every sale moves the ledger. Get alerts in-app, by email and on WhatsApp before you run out.' },
   { icon: Wallet, title: 'Debts with a memory', body: 'Know who owes, how much and when. Send a WhatsApp reminder or a payment link in one tap.' },
-  { icon: MessageCircle, title: 'WhatsApp orders, handled', body: 'Paste a customer chat and Bossly drafts the order. Or text the bot: “sold 2 shirts 5000”.' },
+  { icon: MessageCircle, title: 'WhatsApp orders, handled', body: 'Paste a customer chat and Ojaly drafts the order. Or text the bot: “sold 2 shirts 5000”.' },
   { icon: Receipt, title: 'Receipts that look like you', body: 'Branded PDF receipts and invoices, sequential numbers, shareable links. Every business looks serious.' },
 ];
 </script>
@@ -25,7 +25,7 @@ const features = [
             <p class="text-[8px] font-bold uppercase tracking-widest text-[#A8C0B4]">Your site</p>
             <p class="mt-1 font-display text-xl font-bold">Tola Thrift</p>
             <div class="mt-2 grid grid-cols-2 gap-1"><span class="h-9 rounded bg-brand-500" /><span class="h-9 rounded bg-cream/90" /></div>
-            <p class="mt-2 text-[9px] text-[#A8C0B4]">tolathrift.bossly.ng</p>
+            <p class="mt-2 text-[9px] text-[#A8C0B4]">tolathrift.ojaly.ng</p>
           </div>
           <div class="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/10"><Globe2 class="h-6 w-6 text-accent" /></div>
           <h3 class="relative mt-6 max-w-md font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{{ wide.title }}</h3>

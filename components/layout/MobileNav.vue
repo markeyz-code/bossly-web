@@ -43,7 +43,7 @@ const isActive = (to: string, exact = false) => exact ? route.path === to : rout
         <div class="absolute inset-x-0 bottom-0 rounded-t-[2rem] border border-line bg-surface p-5 pb-10" @click.stop>
           <div class="mx-auto mb-4 h-1.5 w-12 rounded-full bg-line" />
           <div class="mb-4 flex items-center justify-between">
-            <h2 class="font-display text-xl font-bold">More in Bossly</h2>
+            <h2 class="font-display text-xl font-bold">More in Ojaly</h2>
             <button class="flex h-9 w-9 items-center justify-center rounded-full bg-raised" aria-label="Close" @click="moreOpen = false"><X class="h-4 w-4" /></button>
           </div>
           <div class="grid grid-cols-2 gap-2">

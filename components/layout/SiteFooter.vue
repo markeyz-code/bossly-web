@@ -25,7 +25,7 @@ const year = new Date().getFullYear();
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7C9989]">Company</p>
           <a href="#faq" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">FAQ</a>
           <NuxtLink to="/login" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">Sign in</NuxtLink>
-          <a href="mailto:hello@bossly.ng" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">hello@bossly.ng</a>
+          <a href="mailto:hello@ojaly.ng" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">hello@ojaly.ng</a>
         </div>
         <div>
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7C9989]">For students</p>
@@ -33,7 +33,7 @@ const year = new Date().getFullYear();
         </div>
       </div>
       <div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-[#7C9989] sm:flex-row sm:items-center sm:justify-between">
-        <p>© {{ year }} Bossly. Made for hustlers, not corporations.</p>
+        <p>© {{ year }} Ojaly. Made for hustlers, not corporations.</p>
         <p>Naira first. WhatsApp native. Student approved.</p>
       </div>
     </div>

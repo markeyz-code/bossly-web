@@ -1,6 +1,6 @@
 import { TOURS, getTour } from '~/utils/tours';
 
-const STORAGE_KEY = 'bossly.tours.completed';
+const STORAGE_KEY = 'ojaly.tours.completed';
 
 export function useTour() {
   const activeId = useState<string | null>('tour-active', () => null);

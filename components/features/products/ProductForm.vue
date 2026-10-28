@@ -101,7 +101,7 @@ function submit() {
 
     <BaseCard>
       <div class="flex flex-wrap items-start justify-between gap-3">
-        <div><h2 class="font-display text-xl font-bold">Price & stock</h2><p class="mt-1 text-xs text-muted">This is how Bossly calculates profit.</p></div>
+        <div><h2 class="font-display text-xl font-bold">Price & stock</h2><p class="mt-1 text-xs text-muted">This is how Ojaly calculates profit.</p></div>
         <BaseBadge v-if="!isEdit && basePrice" :variant="margin >= 20 ? 'success' : 'warning'">Margin {{ margin }}%</BaseBadge>
       </div>
       <div v-if="!hasVariants || isEdit" class="mt-5 grid gap-4 sm:grid-cols-2">

@@ -3,7 +3,7 @@ import { ArrowDown, CircleDollarSign, PackagePlus, Rocket } from 'lucide-vue-nex
 const steps = [
   { icon: Rocket, number: '01', title: 'Set up in minutes', body: 'Create your account, name your business, pick a vibe. That’s your back office and storefront ready.', detail: 'Name + category + logo. Done.' },
   { icon: PackagePlus, number: '02', title: 'Add what you sell', body: 'Add products, variants and prices once. The same catalog powers your stock, sales, receipts and website.', detail: 'Variants, SKU, cost and selling price.' },
-  { icon: CircleDollarSign, number: '03', title: 'See the truth', body: 'Record a sale. Bossly calculates profit, updates stock, tracks debts and publishes your website automatically.', detail: 'Profit: the number you came for.' },
+  { icon: CircleDollarSign, number: '03', title: 'See the truth', body: 'Record a sale. Ojaly calculates profit, updates stock, tracks debts and publishes your website automatically.', detail: 'Profit: the number you came for.' },
 ];
 </script>
 
@@ -15,7 +15,7 @@ const steps = [
           <p class="eyebrow">How it works</p>
           <h2 class="mt-3 max-w-xl font-display text-4xl font-bold tracking-[-0.04em] sm:text-5xl">From chaos to clarity in three moves.</h2>
         </div>
-        <p class="max-w-sm text-sm leading-relaxed text-muted">No accounting degree. No developer. You already know how to use WhatsApp — you can use Bossly.</p>
+        <p class="max-w-sm text-sm leading-relaxed text-muted">No accounting degree. No developer. You already know how to use WhatsApp — you can use Ojaly.</p>
       </div>
       <div class="relative mt-12 grid gap-5 lg:grid-cols-3">
         <div class="absolute left-[16.6%] right-[16.6%] top-12 hidden border-t-2 border-dashed border-line lg:block" />

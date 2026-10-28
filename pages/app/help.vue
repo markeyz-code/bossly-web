@@ -35,7 +35,7 @@ onMounted(async () => {
 <template>
   <div class="space-y-6">
     <PageHeader title="Help center" subtitle="Short answers, real workflows and guided tours for the way you actually sell." eyebrow="Support">
-      <template #actions><BaseButton :href="'mailto:support@bossly.ng?subject=Bossly%20support'" variant="outline"><Mail class="h-4 w-4" /> Email support</BaseButton></template>
+      <template #actions><BaseButton :href="'mailto:support@ojaly.ng?subject=Ojaly%20support'" variant="outline"><Mail class="h-4 w-4" /> Email support</BaseButton></template>
     </PageHeader>
 
     <section class="relative overflow-hidden rounded-3xl bg-forest-900 p-6 text-white sm:p-8">
@@ -43,7 +43,7 @@ onMounted(async () => {
       <div class="relative max-w-2xl">
         <span class="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-300"><Compass class="h-3 w-3" /> Learn by doing</span>
         <h2 class="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">A five-minute tour beats a fifty-page manual.</h2>
-        <p class="mt-2 text-sm leading-relaxed text-white/70">Pick a tour. Bossly highlights the exact buttons, walks you through the flow and gets out of the way.</p>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Pick a tour. Ojaly highlights the exact buttons, walks you through the flow and gets out of the way.</p>
         <div class="relative mt-5 max-w-lg">
           <Search class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
           <input v-model="query" type="search" placeholder="Search help: debt, stock, website, WhatsApp…" class="min-h-[48px] w-full rounded-2xl border border-white/15 bg-white/10 pl-11 pr-4 text-sm text-white placeholder:text-white/40 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-400/30">
@@ -97,7 +97,7 @@ onMounted(async () => {
           <h3 class="font-display text-lg font-bold">Still stuck?</h3>
           <p class="mt-1 text-xs leading-relaxed text-muted">Tell us what you were trying to do and what happened. Include a screenshot if you can — never send your password or full card details.</p>
           <div class="mt-3 grid gap-2">
-            <BaseButton href="mailto:support@bossly.ng?subject=Bossly%20support" block><Mail class="h-4 w-4" /> support@bossly.ng</BaseButton>
+            <BaseButton href="mailto:support@ojaly.ng?subject=Ojaly%20support" block><Mail class="h-4 w-4" /> support@ojaly.ng</BaseButton>
             <BaseButton to="/app/notifications" variant="outline" block><MessageCircle class="h-4 w-4" /> Check notifications</BaseButton>
           </div>
           <p class="mt-3 text-[10px] text-muted">We usually reply within one business day. For payment issues, include the Paystack reference.</p>

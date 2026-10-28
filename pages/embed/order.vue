@@ -15,7 +15,7 @@ const cart = ref<{ productId: string; variantId: string; name: string; variantNa
 const form = reactive({ name: '', phone: '', address: '' });
 const placing = embed.placing;
 const success = ref<{ orderNumber: string; whatsappUrl: string | null } | null>(null);
-function closeWidget() { if (window.parent !== window) window.parent.postMessage({ type: 'bossly:close' }, '*'); else history.back(); }
+function closeWidget() { if (window.parent !== window) window.parent.postMessage({ type: 'ojaly:close' }, '*'); else history.back(); }
 const count = computed(() => cart.value.reduce((s, i) => s + i.quantity, 0));
 const total = computed(() => cart.value.reduce((s, i) => s + i.priceKobo * i.quantity, 0));
 function add(product: typeof products.value[number]) {
@@ -32,7 +32,7 @@ async function submit() {
   try {
     const result = await embed.place({ customerName: form.name, customerPhone: form.phone, deliveryAddress: form.address, items: cart.value.map((c) => ({ productId: c.productId, variantId: c.variantId, quantity: c.quantity })) });
     success.value = { orderNumber: result.order.orderNumber, whatsappUrl: result.whatsappUrl };
-    if (window.parent !== window) window.parent.postMessage({ type: 'bossly:order-created', orderNumber: result.order.orderNumber }, '*');
+    if (window.parent !== window) window.parent.postMessage({ type: 'ojaly:order-created', orderNumber: result.order.orderNumber }, '*');
   } catch (err) { errorMessage.value = (err as Error).message; }
   finally { placing.value = false; }
 }
@@ -73,7 +73,7 @@ onMounted(() => embed.load());
         <input v-model="form.phone" placeholder="Phone / WhatsApp" class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-xs" inputmode="tel">
         <input v-model="form.address" placeholder="Delivery address" class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-xs">
         <button class="flex w-full items-center justify-center gap-2 rounded-full bg-[var(--brand)] py-3 text-xs font-bold text-white disabled:opacity-50" :disabled="placing || !cart.length" @click="submit"><ShoppingBag class="h-4 w-4" /> {{ placing ? 'Placing order…' : 'Place order' }}</button>
-        <p class="text-center text-[9px] text-gray-400">Order goes straight to {{ business?.name }} · Powered by Bossly</p>
+        <p class="text-center text-[9px] text-gray-400">Order goes straight to {{ business?.name }} · Powered by Ojaly</p>
       </div>
     </div>
   </div>

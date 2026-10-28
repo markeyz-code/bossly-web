@@ -50,7 +50,7 @@ const trialDays = computed(() => businessStore.trialDaysLeft);
   <div v-if="open" class="fixed inset-0 z-40 bg-forest-900/50 backdrop-blur-sm lg:hidden" @click="emit('close')" />
   <aside class="fixed inset-y-0 left-0 z-50 flex w-[264px] flex-col border-r border-line bg-surface transition-transform duration-300 lg:translate-x-0" :class="open ? 'translate-x-0' : '-translate-x-full'">
     <div class="flex h-[72px] items-center justify-between px-5">
-      <NuxtLink to="/app" aria-label="Bossly dashboard"><LogoMark /></NuxtLink>
+      <NuxtLink to="/app" aria-label="Ojaly dashboard"><LogoMark /></NuxtLink>
       <button class="flex h-9 w-9 items-center justify-center rounded-full hover:bg-raised lg:hidden" aria-label="Close menu" @click="emit('close')"><X class="h-5 w-5" /></button>
     </div>
 

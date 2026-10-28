@@ -29,6 +29,6 @@ onMounted(() => offline.hydrate());
         </div>
       </div>
     </div>
-    <div class="rounded-2xl border border-line bg-raised/50 p-4 text-xs leading-relaxed text-muted"><strong class="text-ink">How it works:</strong> when you record a sale or expense without network, Bossly stores it on this device only. When your connection returns, we send it to the server in order. Stock is validated at sync time, so an oversold item will show as “needs attention” instead of silently failing.</div>
+    <div class="rounded-2xl border border-line bg-raised/50 p-4 text-xs leading-relaxed text-muted"><strong class="text-ink">How it works:</strong> when you record a sale or expense without network, Ojaly stores it on this device only. When your connection returns, we send it to the server in order. Stock is validated at sync time, so an oversold item will show as “needs attention” instead of silently failing.</div>
   </div>
 </template>

@@ -2,7 +2,7 @@
 import { ArrowRight, Check, Eye, EyeOff, Sparkles } from 'lucide-vue-next';
 import { registerSchema, zodErrors } from '~/utils/validators';
 definePageMeta({ layout: 'auth' });
-useSeoMeta({ title: 'Create your business', description: 'Set up your Bossly business in under five minutes. Free website included.' });
+useSeoMeta({ title: 'Create your business', description: 'Set up your Ojaly business in under five minutes. Free website included.' });
 const router = useRouter();
 const route = useRoute();
 const auth = useAuth();

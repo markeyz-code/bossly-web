@@ -1,12 +1,12 @@
 const vercelBuild = Boolean(process.env.VERCEL);
 const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
-const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.bossly.ng/api/v1' : 'http://localhost:4100/api/v1');
-const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://bossly.ng' : 'http://localhost:3100');
-const publicAdminUrl = process.env.NUXT_PUBLIC_ADMIN_URL || (vercelBuild ? 'https://admin.bossly.ng' : 'http://localhost:3101');
+const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.ojaly.ng/api/v1' : 'http://localhost:4100/api/v1');
+const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://ojaly.ng' : 'http://localhost:3100');
+const publicAdminUrl = process.env.NUXT_PUBLIC_ADMIN_URL || (vercelBuild ? 'https://admin.ojaly.ng' : 'http://localhost:3101');
 
 if (vercelBuild) {
-  if (!/^https:\/\//.test(publicApiBase)) console.warn('[Bossly Notice] NUXT_PUBLIC_API_BASE is recommended to be an HTTPS API URL on Vercel.');
-  if (!/^https:\/\//.test(publicAppUrl)) console.warn('[Bossly Notice] NUXT_PUBLIC_APP_URL is recommended to be the HTTPS web origin on Vercel.');
+  if (!/^https:\/\//.test(publicApiBase)) console.warn('[Ojaly Notice] NUXT_PUBLIC_API_BASE is recommended to be an HTTPS API URL on Vercel.');
+  if (!/^https:\/\//.test(publicAppUrl)) console.warn('[Ojaly Notice] NUXT_PUBLIC_APP_URL is recommended to be the HTTPS web origin on Vercel.');
 }
 
 export default defineNuxtConfig({
@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     public: {
       apiBase: publicApiBase,
       appUrl: publicAppUrl,
-      rootDomain: process.env.NUXT_PUBLIC_ROOT_DOMAIN || 'bossly.ng',
+      rootDomain: process.env.NUXT_PUBLIC_ROOT_DOMAIN || 'ojaly.ng',
       paystackPublicKey: process.env.NUXT_PUBLIC_PAYSTACK_PUBLIC_KEY || '',
       adminUrl: publicAdminUrl,
     },
@@ -33,12 +33,12 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en-NG' },
-      title: 'Bossly — run your student business. Get a free website.',
+      title: 'Ojaly — run your student business. Get a free website.',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#06231A' },
-        { name: 'description', content: 'Bossly is the business management system for Nigerian student entrepreneurs. Track profit, stock, debts and expenses — and get an auto-generated storefront for free.' },
-        { property: 'og:site_name', content: 'Bossly' },
+        { name: 'description', content: 'Ojaly is the business management system for Nigerian student entrepreneurs. Track profit, stock, debts and expenses — and get an auto-generated storefront for free.' },
+        { property: 'og:site_name', content: 'Ojaly' },
         { property: 'og:type', content: 'website' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
@@ -73,8 +73,8 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Bossly — business, handled',
-      short_name: 'Bossly',
+      name: 'Ojaly — business, handled',
+      short_name: 'Ojaly',
       description: 'Run your student business and get a free website.',
       theme_color: '#06231A',
       background_color: '#FBF7EF',
@@ -95,7 +95,7 @@ export default defineNuxtConfig({
           urlPattern: /^https?:\/\/[^/]+\/(?!api\/|_nuxt\/|__nuxt|embed\/|sw\.js|workbox|favicon|pwa-|.*\.[a-z0-9]{2,5}(?:\?|$)).*/i,
           handler: 'NetworkFirst',
           options: {
-            cacheName: 'bossly-pages',
+            cacheName: 'ojaly-pages',
             networkTimeoutSeconds: 5,
             expiration: { maxEntries: 40, maxAgeSeconds: 86400 },
             precacheFallback: { fallbackURL: '/offline' },
@@ -104,12 +104,12 @@ export default defineNuxtConfig({
         {
           urlPattern: /^https:\/\/res\.cloudinary\.com\/.*/i,
           handler: 'CacheFirst',
-          options: { cacheName: 'bossly-images', expiration: { maxEntries: 100, maxAgeSeconds: 2592000 } },
+          options: { cacheName: 'ojaly-images', expiration: { maxEntries: 100, maxAgeSeconds: 2592000 } },
         },
         {
           urlPattern: /\/api\/v1\/(storefront|plans|public)\/.*/i,
           handler: 'NetworkFirst',
-          options: { cacheName: 'bossly-public-api', networkTimeoutSeconds: 4, expiration: { maxEntries: 50, maxAgeSeconds: 3600 } },
+          options: { cacheName: 'ojaly-public-api', networkTimeoutSeconds: 4, expiration: { maxEntries: 50, maxAgeSeconds: 3600 } },
         },
       ],
     },

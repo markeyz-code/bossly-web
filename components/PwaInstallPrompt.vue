@@ -20,12 +20,12 @@ async function install() {
 function dismiss() {
   visible.value = false;
   dismissed.value = true;
-  if (import.meta.client) sessionStorage.setItem('bossly.pwa-dismissed', '1');
+  if (import.meta.client) sessionStorage.setItem('ojaly.pwa-dismissed', '1');
 }
 onMounted(() => {
   if (!window.matchMedia('(display-mode: standalone)').matches) {
     window.addEventListener('beforeinstallprompt', onBeforeInstall);
-    if (sessionStorage.getItem('bossly.pwa-dismissed')) dismissed.value = true;
+    if (sessionStorage.getItem('ojaly.pwa-dismissed')) dismissed.value = true;
   }
 });
 onBeforeUnmount(() => window.removeEventListener('beforeinstallprompt', onBeforeInstall));
@@ -36,7 +36,7 @@ onBeforeUnmount(() => window.removeEventListener('beforeinstallprompt', onBefore
     <div v-if="visible" class="fixed bottom-24 left-4 right-4 z-[80] flex items-center gap-3 rounded-2xl border border-line bg-surface p-4 shadow-lift sm:bottom-6 sm:left-auto sm:w-[380px]">
       <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-500 text-white"><Download class="h-5 w-5" /></div>
       <div class="min-w-0 flex-1">
-        <p class="text-sm font-bold">Keep Bossly one tap away</p>
+        <p class="text-sm font-bold">Keep Ojaly one tap away</p>
         <p class="text-xs text-muted">Install the app. It works even on rough data.</p>
       </div>
       <button class="rounded-xl bg-ink px-3 py-2 text-xs font-bold text-canvas" @click="install">Install</button>

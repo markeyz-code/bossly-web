@@ -49,7 +49,7 @@ async function pay() {
           <div class="mt-6"><label class="label-base">Your email</label><input v-model="email" type="email" class="input-base" placeholder="you@example.com" autocomplete="email"></div>
           <p v-if="errorMessage" class="mt-2 rounded-xl bg-danger/5 p-2.5 text-xs text-danger">{{ errorMessage }}</p>
           <button class="mt-4 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-brand-500 text-sm font-bold text-white disabled:opacity-50" :disabled="loading" @click="pay"><LockKeyhole class="h-4 w-4" /> {{ loading ? 'Opening Paystack…' : 'Pay securely with Paystack' }} <ArrowRight v-if="!loading" class="h-4 w-4" /></button>
-          <p class="mt-3 text-center text-[10px] text-muted">Secured by Paystack. Your card details never touch Bossly.</p>
+          <p class="mt-3 text-center text-[10px] text-muted">Secured by Paystack. Your card details never touch Ojaly.</p>
           <a v-if="wa" :href="wa" target="_blank" class="mt-4 flex items-center justify-center gap-1.5 text-xs font-semibold text-muted"><MessageCircle class="h-3.5 w-3.5" /> Questions? Chat with the business</a>
         </template>
       </div>

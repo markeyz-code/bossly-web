@@ -35,7 +35,7 @@ const template = computed(() => TEMPLATES[active.value]);
           <div class="relative overflow-hidden rounded-[1.5rem] border border-white/20 bg-white shadow-[0_30px_80px_-30px_rgba(0,0,0,.7)]" :style="templateVars(template)">
             <div class="flex items-center gap-1.5 border-b px-4 py-2.5" style="background: var(--sf-surface); border-color: color-mix(in srgb, var(--sf-ink) 12%, transparent)">
               <span class="h-2 w-2 rounded-full bg-[#FF5A5F]" /><span class="h-2 w-2 rounded-full bg-[#FFBD2E]" /><span class="h-2 w-2 rounded-full bg-[#27C93F]" />
-              <span class="mx-auto rounded-md px-3 py-1 text-[9px]" style="background: color-mix(in srgb, var(--sf-ink) 5%, transparent); color: var(--sf-muted)">tolathrift.bossly.ng</span>
+              <span class="mx-auto rounded-md px-3 py-1 text-[9px]" style="background: color-mix(in srgb, var(--sf-ink) 5%, transparent); color: var(--sf-muted)">tolathrift.ojaly.ng</span>
             </div>
             <div class="min-h-[420px] p-5 sm:p-7" :style="{ background: template.colors.background, color: template.colors.ink, fontFamily: template.fonts.body }">
               <div class="flex items-center justify-between">

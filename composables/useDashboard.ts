@@ -23,14 +23,14 @@ export function useDashboard() {
     exporting.value = true;
     try {
       const blob = await reportsApi.downloadCsv({ range: range.value, ...(range.value === 'custom' ? { from: customFrom.value, to: customTo.value } : {}) });
-      downloadBlob(blob, `bossly-report-${new Date().toISOString().slice(0, 10)}.csv`);
+      downloadBlob(blob, `ojaly-report-${new Date().toISOString().slice(0, 10)}.csv`);
     } finally { exporting.value = false; }
   }
   async function exportPdf() {
     exporting.value = true;
     try {
       const blob = await reportsApi.downloadPdf({ range: range.value, ...(range.value === 'custom' ? { from: customFrom.value, to: customTo.value } : {}) });
-      downloadBlob(blob, `bossly-report-${new Date().toISOString().slice(0, 10)}.pdf`);
+      downloadBlob(blob, `ojaly-report-${new Date().toISOString().slice(0, 10)}.pdf`);
     } finally { exporting.value = false; }
   }
   return { data, loading, exporting, error, range, customFrom, customTo, load, exportCsv, exportPdf };

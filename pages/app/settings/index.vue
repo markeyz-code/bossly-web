@@ -209,7 +209,7 @@ onMounted(async () => { if (!businessStore.context) await businessStore.load(); 
       <BaseCard>
         <h2 class="font-display text-xl font-bold">Stock & debt alerts</h2><p class="mt-1 text-xs text-muted">We debounce low-stock alerts so you are not spammed.</p>
         <div class="mt-5 space-y-4">
-          <BaseCheckbox v-model="alerts.lowStockInApp" label="In-app notifications" description="A bell notification inside Bossly." />
+          <BaseCheckbox v-model="alerts.lowStockInApp" label="In-app notifications" description="A bell notification inside Ojaly." />
           <BaseCheckbox v-model="alerts.lowStockEmail" label="Email alerts" description="Sent to the owner's email." />
           <BaseCheckbox v-model="alerts.lowStockWhatsapp" label="WhatsApp alerts" description="To your verified number, using an approved template outside the 24-hour window." />
           <BaseCheckbox v-model="alerts.debtReminders" label="Automatic debt reminders" description="Email reminders when a customer has an email address." />
@@ -240,7 +240,7 @@ onMounted(async () => { if (!businessStore.context) await businessStore.load(); 
           <BaseButton size="sm" :loading="summaries.sending.value" @click="sendSummaryNow">Send now</BaseButton>
           <BaseButton size="sm" variant="ghost" @click="summaries.load(summaryPeriod)"><RefreshCw class="h-4 w-4" /></BaseButton>
         </div>
-        <p class="mt-3 text-[10px] text-muted">WhatsApp outside the 24-hour window requires the approved templates <code>bossly_daily_summary</code> and <code>bossly_weekly_summary</code>.</p>
+        <p class="mt-3 text-[10px] text-muted">WhatsApp outside the 24-hour window requires the approved templates <code>ojaly_daily_summary</code> and <code>ojaly_weekly_summary</code>.</p>
       </BaseCard>
     </div>
 
@@ -305,7 +305,7 @@ onMounted(async () => { if (!businessStore.context) await businessStore.load(); 
           <BaseButton class="mt-4" size="sm" :variant="plan.key === currentPlan?.key ? 'secondary' : 'outline'" :disabled="plan.key === currentPlan?.key || plan.priceMonthlyKobo === 0 || plan.key === 'free'" :loading="billing.checkingOut.value" @click="upgrade(plan.key)">{{ plan.key === currentPlan?.key ? 'Current plan' : plan.priceMonthlyKobo === 0 ? 'Free tier' : 'Choose plan' }}</BaseButton>
         </div>
       </div>
-      <BaseCard><h3 class="font-display text-lg font-bold">Have a coupon?</h3><div class="mt-2 flex flex-col gap-2 sm:flex-row"><input v-model="coupon" class="input-base sm:flex-1" placeholder="STUDENT20" aria-label="Coupon code"><p class="text-[10px] text-muted sm:max-w-xs">Apply at checkout after choosing a plan. Coupons are issued by the Bossly team.</p></div></BaseCard>
+      <BaseCard><h3 class="font-display text-lg font-bold">Have a coupon?</h3><div class="mt-2 flex flex-col gap-2 sm:flex-row"><input v-model="coupon" class="input-base sm:flex-1" placeholder="STUDENT20" aria-label="Coupon code"><p class="text-[10px] text-muted sm:max-w-xs">Apply at checkout after choosing a plan. Coupons are issued by the Ojaly team.</p></div></BaseCard>
     </div>
 
     <div v-else-if="activeTab === 'domain'" class="grid gap-5 xl:grid-cols-[1.1fr_0.9fr]">
@@ -315,7 +315,7 @@ onMounted(async () => { if (!businessStore.context) await businessStore.load(); 
         <template v-else>
           <div class="mt-4"><BaseInput v-model="domainInput" label="Your domain" placeholder="shop.yourname.com" hint="Use a subdomain you control. Do not include https://." /></div>
           <div class="mt-3 flex flex-wrap gap-2"><BaseButton :loading="domainApi.saving.value" @click="setDomain">Save domain</BaseButton><BaseButton variant="outline" :loading="domainApi.verifying.value" @click="verifyDomain"><RefreshCw class="h-4 w-4" /> Verify DNS</BaseButton><BaseButton v-if="businessStore.business?.customDomain" variant="ghost" class="text-danger" @click="removeDomain">Remove</BaseButton></div>
-          <div v-if="businessStore.business?.customDomain" class="mt-4 rounded-2xl bg-raised/60 p-4 text-xs"><p class="font-bold">{{ businessStore.business.customDomain }} <BaseBadge :variant="businessStore.business.customDomainVerified ? 'success' : 'warning'" class="ml-1">{{ businessStore.business.customDomainVerified ? 'Verified' : 'Pending DNS' }}</BaseBadge></p><div class="mt-3 grid gap-2 sm:grid-cols-2"><div><p class="text-[10px] font-bold uppercase tracking-wider text-muted">Record type</p><p class="font-mono">CNAME</p></div><div><p class="text-[10px] font-bold uppercase tracking-wider text-muted">Target</p><p class="font-mono">cname.bossly.ng</p></div></div><p class="mt-2 text-[10px] text-muted">DNS can take up to 24 hours. SSL is issued automatically after verification. Until then, your bossly.ng storefront keeps working.</p></div>
+          <div v-if="businessStore.business?.customDomain" class="mt-4 rounded-2xl bg-raised/60 p-4 text-xs"><p class="font-bold">{{ businessStore.business.customDomain }} <BaseBadge :variant="businessStore.business.customDomainVerified ? 'success' : 'warning'" class="ml-1">{{ businessStore.business.customDomainVerified ? 'Verified' : 'Pending DNS' }}</BaseBadge></p><div class="mt-3 grid gap-2 sm:grid-cols-2"><div><p class="text-[10px] font-bold uppercase tracking-wider text-muted">Record type</p><p class="font-mono">CNAME</p></div><div><p class="text-[10px] font-bold uppercase tracking-wider text-muted">Target</p><p class="font-mono">cname.ojaly.ng</p></div></div><p class="mt-2 text-[10px] text-muted">DNS can take up to 24 hours. SSL is issued automatically after verification. Until then, your ojaly.ng storefront keeps working.</p></div>
           <div v-if="domainApi.result.value" class="mt-3 rounded-xl border p-3 text-xs" :class="domainApi.result.value.verified ? 'border-success/30 bg-success/5 text-success' : 'border-warning/30 bg-warning/10 text-warning'">{{ domainApi.result.value.reason }}</div>
         </template>
       </BaseCard>

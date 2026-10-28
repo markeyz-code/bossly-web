@@ -50,7 +50,7 @@ function printReceipt() { window.print(); }
             <div v-if="receipt.deliveryFeeKobo" class="flex justify-between"><dt class="text-muted">Delivery</dt><dd>{{ formatNaira(receipt.deliveryFeeKobo) }}</dd></div>
             <div class="flex justify-between border-t border-line pt-2 font-display text-lg font-bold"><dt>Total</dt><dd :style="{ color: brand }">{{ formatNaira(receipt.totalKobo) }}</dd></div>
           </dl>
-          <p class="mt-6 border-t border-line pt-4 text-center text-[10px] text-muted">This receipt was generated automatically by {{ business.name }} on Bossly.</p>
+          <p class="mt-6 border-t border-line pt-4 text-center text-[10px] text-muted">This receipt was generated automatically by {{ business.name }} on Ojaly.</p>
         </div>
       </div>
     </div>

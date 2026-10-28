@@ -77,7 +77,7 @@ onMounted(load);
     </div>
 
     <div v-if="loading" class="space-y-2"><div v-for="i in 4" :key="i" class="skeleton h-24 rounded-2xl" /></div>
-    <BaseEmptyState v-else-if="!items.length" title="No debts on record" message="When a customer pays later, record it here. Bossly keeps the running balance and reminds them for you." action-label="Record a debt" @action="createOpen = true">
+    <BaseEmptyState v-else-if="!items.length" title="No debts on record" message="When a customer pays later, record it here. Ojaly keeps the running balance and reminds them for you." action-label="Record a debt" @action="createOpen = true">
       <template #icon><Wallet class="h-9 w-9" /></template>
     </BaseEmptyState>
     <div v-else class="space-y-2">

@@ -81,7 +81,7 @@ watch(() => props.business.slug, (slug) => cart.init(slug, props.business.name),
         </div>
         <div class="mt-10 flex flex-col gap-2 border-t border-current/10 pt-5 text-[10px] opacity-50 sm:flex-row sm:justify-between">
           <p>© {{ new Date().getFullYear() }} {{ business.name }}. All rights reserved.</p>
-          <NuxtLink to="/" target="_blank" class="hover:opacity-100">Store powered by Bossly · get yours free</NuxtLink>
+          <NuxtLink to="/" target="_blank" class="hover:opacity-100">Store powered by Ojaly · get yours free</NuxtLink>
         </div>
       </div>
     </footer>
