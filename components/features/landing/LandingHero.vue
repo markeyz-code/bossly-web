@@ -227,10 +227,6 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
             <span>{{ String(index + 1).padStart(2, '0') }} / {{ String(slides.length).padStart(2, '0') }}</span>
           </div>
         </div>
-        <div class="absolute -bottom-4 -left-3 rotate-[-3deg] rounded-2xl border border-line bg-surface px-3.5 py-2.5 shadow-lift sm:-left-8">
-          <p class="text-[9px] font-bold uppercase tracking-wider text-muted">For businesses that</p>
-          <p class="text-xs font-bold text-success">run on WhatsApp</p>
-        </div>
       </div>
     </div>
 
