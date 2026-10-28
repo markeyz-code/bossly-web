@@ -25,7 +25,7 @@ const links = [
         </template>
         <template v-else>
           <NuxtLink to="/login" class="hidden rounded-full px-4 py-2 text-sm font-semibold hover:bg-raised sm:inline-flex">Sign in</NuxtLink>
-          <BaseButton to="/register" size="sm">Start free <span aria-hidden="true">→</span></BaseButton>
+          <BaseButton to="/register" size="sm" class="hidden sm:inline-flex">Start free <span aria-hidden="true">→</span></BaseButton>
         </template>
         <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full border border-line lg:hidden" aria-label="Open menu" @click="open = !open">
           <X v-if="open" class="h-5 w-5" /><Menu v-else class="h-5 w-5" />
@@ -35,6 +35,7 @@ const links = [
     <div v-if="open" class="border-t border-line bg-surface p-4 lg:hidden">
       <a v-for="link in links" :key="link.href" :href="link.href" class="flex min-h-[48px] items-center rounded-xl px-3 text-sm font-semibold hover:bg-raised" @click="open = false">{{ link.label }}</a>
       <NuxtLink to="/login" class="flex min-h-[48px] items-center rounded-xl px-3 text-sm font-semibold hover:bg-raised" @click="open = false">Sign in</NuxtLink>
+      <NuxtLink to="/register" class="mt-1 flex min-h-[48px] items-center justify-center rounded-xl bg-brand-500 px-3 text-sm font-bold text-white" @click="open = false">Start free →</NuxtLink>
     </div>
   </header>
 </template>

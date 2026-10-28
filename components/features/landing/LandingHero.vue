@@ -22,7 +22,7 @@ const slides: Slide[] = [
     answer: 'Ojaly adds up every sale, cost of goods and real expense — then shows the one number that tells you whether the business is actually working.',
     outcome: 'See your true profit, in plain language',
     image: '/images/business/market-trader.webp',
-    alt: 'A Nigerian market trader arranging fresh produce at her stall',
+    alt: 'A Nigerian market trader holding fresh produce at his stall',
     position: 'center 42%',
   },
   {
@@ -41,9 +41,9 @@ const slides: Slide[] = [
     headline: 'Your catalogue is the website.',
     answer: 'Add what you sell once. Pick a template, set your colours and publish a fast storefront with cart, checkout and Paystack. No designer. No developer bill.',
     outcome: 'A storefront that opens while you sleep',
-    image: '/images/business/fashion-warehouse.webp',
-    alt: 'A Black woman business owner working in a clothing store',
-    position: 'center 28%',
+    image: '/images/business/website-founder.webp',
+    alt: 'A Black woman entrepreneur working on a laptop in her office',
+    position: 'center 36%',
   },
   {
     label: 'The 11pm question · WhatsApp',
@@ -111,7 +111,7 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
           <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-[11px] font-semibold text-muted">Not just students · Not just boutiques</span>
         </div>
 
-        <h1 class="font-display text-[clamp(3rem,6.3vw,6rem)] font-bold leading-[0.91] tracking-[-0.065em]">
+        <h1 class="font-display text-[clamp(2.7rem,6.8vw,6rem)] font-bold leading-[0.91] tracking-[-0.065em]">
           Run the business.<br>
           <span class="relative inline-block">
             <span class="relative z-10">Know the money.</span>
@@ -148,13 +148,11 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
           </div>
 
           <div class="mt-3 min-h-[132px]" aria-live="polite">
-            <Transition name="hero-slide" mode="out-in">
-              <div :key="index">
-                <p class="font-display text-xl font-bold leading-snug tracking-[-0.02em] sm:text-2xl">{{ slide.question }}</p>
-                <p class="mt-2 text-[13px] leading-relaxed text-muted">{{ slide.answer }}</p>
-                <p class="mt-3 inline-flex items-center gap-1.5 rounded-full bg-success/10 px-2.5 py-1.5 text-[10px] font-bold text-success"><Check class="h-3 w-3" /> {{ slide.outcome }}</p>
-              </div>
-            </Transition>
+            <div :key="index" class="hero-copy">
+              <p class="font-display text-xl font-bold leading-snug tracking-[-0.02em] sm:text-2xl">{{ slide.question }}</p>
+              <p class="mt-2 text-[13px] leading-relaxed text-muted">{{ slide.answer }}</p>
+              <p class="mt-3 inline-flex items-center gap-1.5 rounded-full bg-success/10 px-2.5 py-1.5 text-[10px] font-bold text-success"><Check class="h-3 w-3" /> {{ slide.outcome }}</p>
+            </div>
           </div>
 
           <div class="mt-4 flex items-center justify-between gap-3 border-t border-line pt-4">
@@ -198,17 +196,15 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
         <div class="absolute -right-4 bottom-12 hidden h-16 w-16 rotate-12 rounded-2xl bg-brand-500 sm:block" />
         <div class="relative rotate-[1.2deg] overflow-hidden rounded-[2rem] border-2 border-ink bg-forest-900 shadow-[10px_12px_0_0_#06231A]">
           <div class="relative aspect-[4/5] overflow-hidden bg-forest-900 sm:aspect-[5/6]">
-            <Transition name="hero-photo" mode="out-in">
-              <img
-                :key="slide.image"
-                :src="slide.image"
-                :alt="slide.alt"
-                :style="{ objectPosition: slide.position }"
-                class="h-full w-full object-cover"
-                :loading="index === 0 ? 'eager' : 'lazy'"
-                :fetchpriority="index === 0 ? 'high' : 'auto'"
-              >
-            </Transition>
+            <img
+              :key="slide.image"
+              :src="slide.image"
+              :alt="slide.alt"
+              :style="{ objectPosition: slide.position }"
+              class="hero-photo h-full w-full object-cover"
+              :loading="index === 0 ? 'eager' : 'lazy'"
+              :fetchpriority="index === 0 ? 'high' : 'auto'"
+            >
             <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-900 via-forest-900/20 to-transparent" />
             <div class="absolute left-4 right-4 top-4 flex items-center justify-between gap-2">
               <span class="rounded-full border border-white/20 bg-forest-900/70 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur">Real business · Real numbers</span>
@@ -243,17 +239,11 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
 </template>
 
 <style scoped>
-.hero-slide-enter-active,
-.hero-slide-leave-active,
-.hero-photo-enter-active,
-.hero-photo-leave-active {
-  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.hero-slide-enter-from { opacity: 0; transform: translateY(10px); }
-.hero-slide-leave-to { opacity: 0; transform: translateY(-8px); }
-.hero-photo-enter-from { opacity: 0; transform: scale(1.03); }
-.hero-photo-leave-to { opacity: 0; transform: scale(0.99); }
+.hero-copy { animation: hero-copy-in 0.32s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero-photo { animation: hero-photo-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes hero-copy-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes hero-photo-in { from { opacity: 0; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) {
-  .hero-slide-enter-active, .hero-slide-leave-active, .hero-photo-enter-active, .hero-photo-leave-active { transition: none; }
+  .hero-copy, .hero-photo { animation: none; }
 }
 </style>

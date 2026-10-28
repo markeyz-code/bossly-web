@@ -8,7 +8,7 @@ const questions = [
     answer: 'Ojaly subtracts the real cost of what you sold and the expenses you actually paid. You see net profit, margin and the one or two things quietly eating your money.',
     outcome: 'Know your true margin',
     image: '/images/business/market-trader.webp',
-    alt: 'A Nigerian market trader at her stall',
+    alt: 'A Nigerian market trader at his stall',
   },
   {
     label: 'The debt question',
@@ -23,8 +23,8 @@ const questions = [
     question: 'Where do customers find me when they’re not already in my DMs?',
     answer: 'Your catalogue becomes a fast storefront with search, cart, checkout, Paystack and a custom domain. Publish it in one tap and look open for business 24/7.',
     outcome: 'Look open around the clock',
-    image: '/images/business/fashion-warehouse.webp',
-    alt: 'A Black woman entrepreneur in a clothing store',
+    image: '/images/business/website-founder.webp',
+    alt: 'A Black woman entrepreneur working on a laptop in her office',
   },
   {
     label: 'The service question',

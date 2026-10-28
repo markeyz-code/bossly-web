@@ -35,6 +35,8 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Ojaly is the operating system for ambitious Nigerian businesses. Track real profit, stock, debts and expenses — and turn your catalogue into a free storefront.' },
         { property: 'og:site_name', content: 'Ojaly' },
         { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: 'https://ojaly.org/images/business/market-trader.webp' },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       ],
@@ -84,7 +86,10 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+      skipWaiting: true,
+      clientsClaim: true,
+      cleanupOutdatedCaches: true,
       runtimeCaching: [
         {
           urlPattern: /^https?:\/\/[^/]+\/(?!api\/|_nuxt\/|__nuxt|embed\/|sw\.js|workbox|favicon|pwa-|.*\.[a-z0-9]{2,5}(?:\?|$)).*/i,
