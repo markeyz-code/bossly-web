@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   const host = forwardedHost.split(',')[0].trim().split(':')[0].toLowerCase();
   if (!host || host === 'localhost' || host === '127.0.0.1' || host.endsWith('.localhost')) return;
   const config = useRuntimeConfig(event);
-  const rootDomain = String(config.public.rootDomain || 'ojaly.ng').toLowerCase();
+  const rootDomain = String(config.public.rootDomain || 'ojaly.org').toLowerCase();
   let slug: string | null = null;
 
   if (host === rootDomain || host === `www.${rootDomain}`) return;

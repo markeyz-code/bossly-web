@@ -6,11 +6,11 @@ useSeoMeta({
   ogTitle: 'Ojaly — run your student business. Get a free website.',
   ogDescription: 'Track real profit, stock, debts and expenses. Your catalog becomes a free storefront. Built for Nigerian student businesses.',
   ogType: 'website',
-  ogUrl: 'https://ojaly.ng',
+  ogUrl: 'https://ojaly.org',
   twitterCard: 'summary_large_image',
 });
 useHead({
-  link: [{ rel: 'canonical', href: 'https://ojaly.ng' }],
+  link: [{ rel: 'canonical', href: 'https://ojaly.org' }],
   script: [{
     type: 'application/ld+json',
     innerHTML: JSON.stringify({

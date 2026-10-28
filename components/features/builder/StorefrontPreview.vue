@@ -30,7 +30,7 @@ const home = computed<StorefrontHome>(() => ({
 <template>
   <div class="overflow-hidden rounded-2xl border border-line bg-raised/50">
     <div class="flex items-center justify-between gap-2 border-b border-line bg-surface px-3 py-2">
-      <div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-danger/60" /><span class="h-2 w-2 rounded-full bg-warning/60" /><span class="h-2 w-2 rounded-full bg-success/60" /><span class="ml-2 hidden rounded bg-raised px-2 py-0.5 text-[9px] text-muted sm:inline">{{ slug }}.ojaly.ng</span></div>
+      <div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-danger/60" /><span class="h-2 w-2 rounded-full bg-warning/60" /><span class="h-2 w-2 rounded-full bg-success/60" /><span class="ml-2 hidden rounded bg-raised px-2 py-0.5 text-[9px] text-muted sm:inline">{{ slug }}.ojaly.org</span></div>
       <div class="flex gap-1"><button class="rounded p-1.5" :class="device === 'desktop' ? 'bg-ink text-canvas' : 'text-muted'" aria-label="Desktop preview" @click="device = 'desktop'"><Monitor class="h-3.5 w-3.5" /></button><button class="rounded p-1.5" :class="device === 'mobile' ? 'bg-ink text-canvas' : 'text-muted'" aria-label="Mobile preview" @click="device = 'mobile'"><Smartphone class="h-3.5 w-3.5" /></button></div>
     </div>
     <div class="flex justify-center overflow-auto bg-[#D9D2C4] p-2 sm:p-4" style="max-height: 720px">

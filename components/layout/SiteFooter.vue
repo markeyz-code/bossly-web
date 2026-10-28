@@ -25,7 +25,7 @@ const year = new Date().getFullYear();
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7C9989]">Company</p>
           <a href="#faq" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">FAQ</a>
           <NuxtLink to="/login" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">Sign in</NuxtLink>
-          <a href="mailto:hello@ojaly.ng" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">hello@ojaly.ng</a>
+          <a href="mailto:hello@ojaly.org" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">hello@ojaly.org</a>
         </div>
         <div>
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7C9989]">For students</p>

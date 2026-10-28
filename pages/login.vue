@@ -28,7 +28,7 @@ async function submit() {
   }
 }
 function useDemo() {
-  form.email = 'demo@ojaly.ng';
+  form.email = 'demo@ojaly.org';
   form.password = 'Demo12345';
   toast.info('Demo account filled. Tap sign in.');
 }

@@ -88,7 +88,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     body: [
       'Your catalogue is already the website. In My website → Design, pick a template and set your brand colour. In Media, add a hero video, story image and a lookbook.',
       'Use Content to write a tagline people remember, and SEO to control what appears when the link is shared on WhatsApp or Google.',
-      'Publish when the preview looks right. Share the ojaly.ng link everywhere; connect a custom domain on the Boss plan.',
+      'Publish when the preview looks right. Share the ojaly.org link everywhere; connect a custom domain on the Boss plan.',
       'The embed tab gives you a small script for an existing website or link-in-bio page.',
     ],
   },

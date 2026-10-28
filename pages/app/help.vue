@@ -35,7 +35,7 @@ onMounted(async () => {
 <template>
   <div class="space-y-6">
     <PageHeader title="Help center" subtitle="Short answers, real workflows and guided tours for the way you actually sell." eyebrow="Support">
-      <template #actions><BaseButton :href="'mailto:support@ojaly.ng?subject=Ojaly%20support'" variant="outline"><Mail class="h-4 w-4" /> Email support</BaseButton></template>
+      <template #actions><BaseButton :href="'mailto:support@ojaly.org?subject=Ojaly%20support'" variant="outline"><Mail class="h-4 w-4" /> Email support</BaseButton></template>
     </PageHeader>
 
     <section class="relative overflow-hidden rounded-3xl bg-forest-900 p-6 text-white sm:p-8">
@@ -97,7 +97,7 @@ onMounted(async () => {
           <h3 class="font-display text-lg font-bold">Still stuck?</h3>
           <p class="mt-1 text-xs leading-relaxed text-muted">Tell us what you were trying to do and what happened. Include a screenshot if you can — never send your password or full card details.</p>
           <div class="mt-3 grid gap-2">
-            <BaseButton href="mailto:support@ojaly.ng?subject=Ojaly%20support" block><Mail class="h-4 w-4" /> support@ojaly.ng</BaseButton>
+            <BaseButton href="mailto:support@ojaly.org?subject=Ojaly%20support" block><Mail class="h-4 w-4" /> support@ojaly.org</BaseButton>
             <BaseButton to="/app/notifications" variant="outline" block><MessageCircle class="h-4 w-4" /> Check notifications</BaseButton>
           </div>
           <p class="mt-3 text-[10px] text-muted">We usually reply within one business day. For payment issues, include the Paystack reference.</p>

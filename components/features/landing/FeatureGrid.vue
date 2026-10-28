@@ -25,7 +25,7 @@ const features = [
             <p class="text-[8px] font-bold uppercase tracking-widest text-[#A8C0B4]">Your site</p>
             <p class="mt-1 font-display text-xl font-bold">Tola Thrift</p>
             <div class="mt-2 grid grid-cols-2 gap-1"><span class="h-9 rounded bg-brand-500" /><span class="h-9 rounded bg-cream/90" /></div>
-            <p class="mt-2 text-[9px] text-[#A8C0B4]">tolathrift.ojaly.ng</p>
+            <p class="mt-2 text-[9px] text-[#A8C0B4]">tolathrift.ojaly.org</p>
           </div>
           <div class="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/10"><Globe2 class="h-6 w-6 text-accent" /></div>
           <h3 class="relative mt-6 max-w-md font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{{ wide.title }}</h3>

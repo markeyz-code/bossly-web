@@ -24,7 +24,7 @@ The API must be running (default `http://localhost:4100/api/v1`).
 | --- | --- |
 | `NUXT_PUBLIC_API_BASE` | Backend API base URL |
 | `NUXT_PUBLIC_APP_URL` | Public origin used in OG images/links |
-| `NUXT_PUBLIC_ROOT_DOMAIN` | e.g. `ojaly.ng` for subdomain routing |
+| `NUXT_PUBLIC_ROOT_DOMAIN` | e.g. `ojaly.org` for subdomain routing |
 | `NUXT_PUBLIC_ADMIN_URL` | admin console URL used by the impersonation exit banner |
 | `NUXT_PUBLIC_PAYSTACK_PUBLIC_KEY` | optional, exposed for future inline checkout |
 
