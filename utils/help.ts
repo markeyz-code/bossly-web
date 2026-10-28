@@ -96,7 +96,7 @@ export const HELP_ARTICLES: HelpArticle[] = [
     id: 'referrals', category: 'billing', title: 'Earn from referring other businesses',
     summary: 'Share your code, earn 20% of a referred business’s first payment.',
     body: [
-      'Open Refer & earn to get your personal code and link. Share it with another student business owner.',
+      'Open Refer & earn to get your personal code and link. Share it with another business owner.',
       'When they sign up with your link and make their first subscription payment, you earn 20% of that payment. There is one commission per business.',
       'Commissions are held for 7 days, then become available to withdraw. The minimum payout is ₦1,000.',
       'Add your Nigerian bank details, request a payout, and track it from the same page. Ojaly pays approved requests manually.',

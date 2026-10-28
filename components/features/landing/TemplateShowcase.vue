@@ -45,7 +45,7 @@ const template = computed(() => TEMPLATES[active.value]);
               <div class="mt-10" :class="template.layout === 'centered' ? 'text-center' : ''">
                 <p class="text-[9px] font-bold uppercase tracking-[0.2em]" :style="{ color: template.colors.primary }">Fresh drops every Friday</p>
                 <h3 class="mt-2 max-w-[320px] font-bold leading-[0.95] tracking-[-0.05em]" :class="template.layout === 'centered' ? 'mx-auto' : ''" :style="{ fontFamily: template.fonts.display, fontSize: '44px' }">Campus fits.<br>Campus prices.</h3>
-                <p class="mt-3 max-w-[280px] text-[11px] leading-relaxed" :class="template.layout === 'centered' ? 'mx-auto' : ''" :style="{ color: template.colors.muted }">Hand-picked thrift and streetwear for students who want to look expensive on a student budget.</p>
+                <p class="mt-3 max-w-[280px] text-[11px] leading-relaxed" :class="template.layout === 'centered' ? 'mx-auto' : ''" :style="{ color: template.colors.muted }">Hand-picked thrift and streetwear for people who want to look expensive without the designer price tag.</p>
               </div>
               <div class="mt-8 grid grid-cols-3 gap-2">
                 <div v-for="(label, index) in ['Hoodie', 'Cap', 'Tee']" :key="label" class="overflow-hidden rounded-[var(--sf-radius)] border" :style="{ borderColor: `color-mix(in srgb, ${template.colors.ink} 12%, transparent)` }">

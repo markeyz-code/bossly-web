@@ -9,7 +9,7 @@ const year = new Date().getFullYear();
       <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <LogoMark dark />
-          <p class="mt-4 max-w-xs text-sm leading-relaxed text-[#A8C0B4]">The business management system for student entrepreneurs in Nigeria. Run the business. We build the website.</p>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-[#A8C0B4]">The operating system for ambitious Nigerian businesses. Run the business. We build the website.</p>
           <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-500 px-4 py-2.5 text-sm font-bold text-white">
             <MessageCircle class="h-4 w-4" /> Chat on WhatsApp
           </a>
@@ -28,7 +28,7 @@ const year = new Date().getFullYear();
           <a href="mailto:hello@ojaly.org" class="block py-1.5 text-sm text-[#C7D8CE] hover:text-white">hello@ojaly.org</a>
         </div>
         <div>
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7C9989]">For students</p>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7C9989]">For businesses</p>
           <p class="text-sm leading-relaxed text-[#C7D8CE]">Free to start.<br>No card needed.<br>Built for Nigerian data.</p>
         </div>
       </div>

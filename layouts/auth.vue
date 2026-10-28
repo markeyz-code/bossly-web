@@ -12,7 +12,7 @@ import { ArrowLeft } from 'lucide-vue-next';
         <NuxtLink to="/" aria-label="Ojaly home"><LogoMark dark size="lg" /></NuxtLink>
       </div>
       <div class="relative max-w-xl">
-        <p class="mb-4 inline-flex rounded-full border border-white/20 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#A8C0B4]">Built for student businesses</p>
+        <p class="mb-4 inline-flex rounded-full border border-white/20 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#A8C0B4]">Built for ambitious businesses</p>
         <h1 class="font-display text-5xl font-bold leading-[0.98] tracking-[-0.05em] xl:text-6xl">Know your money.<br><span class="text-brand-400">Own your shine.</span></h1>
         <p class="mt-5 max-w-md text-base leading-relaxed text-[#BFD2C7]">Track sales, stock and debts in one place. Your catalog automatically becomes a free website.</p>
         <div class="mt-9 rounded-3xl border border-white/15 bg-white/5 p-5 backdrop-blur">

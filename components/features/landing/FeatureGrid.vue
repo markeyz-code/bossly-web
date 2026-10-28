@@ -16,7 +16,7 @@ const features = [
       <div class="max-w-2xl">
         <p class="eyebrow">Everything in one place</p>
         <h2 class="mt-3 font-display text-4xl font-bold tracking-[-0.04em] sm:text-5xl">The back office your hustle deserves.</h2>
-        <p class="mt-4 text-sm leading-relaxed text-muted sm:text-base">Built around the way Nigerian students actually sell: fast, mobile-first, on WhatsApp, with cash and transfers.</p>
+        <p class="mt-4 text-sm leading-relaxed text-muted sm:text-base">Built around the way Nigerian businesses actually sell: fast, mobile-first, on WhatsApp, with cash, transfers and real customers.</p>
       </div>
       <div class="mt-10 grid gap-4 lg:grid-cols-3">
         <div class="relative overflow-hidden rounded-[2rem] border-2 border-ink bg-forest-900 p-7 text-white lg:col-span-2 lg:row-span-2">

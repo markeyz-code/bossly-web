@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Plus } from 'lucide-vue-next';
 const faqs = [
+  { q: 'Is Ojaly only for students?', a: 'Not at all. Ojaly is built for ambitious Nigerian businesses at any stage — thrift and fashion sellers, food vendors, salons and barbers, designers, printers, gadget sellers, online stores and service businesses. Student founders get a head start because the product is mobile-first and WhatsApp-native, but the same tools work for any small business.' },
+  { q: 'I sell services, not products. Can I use Ojaly?', a: 'Yes. Use Ojaly to record jobs, deposits, expenses, customer balances, payment links and receipts without forcing your work into a product catalogue. You can still publish a storefront for the physical products you sell alongside your services.' },
   { q: 'Do I really get a free website?', a: 'Yes. Every business gets a storefront generated from the products you already add. It has home, product listing, product pages, cart, checkout, about and contact. You can publish it in one tap.' },
   { q: 'Can I use Ojaly without the website?', a: 'Of course. If you already have a site, use the back office only, or drop our order widget onto your existing site. The management system is the product; the site is the bonus.' },
   { q: 'I sell mostly on WhatsApp. Will this work?', a: 'That is exactly who we built it for. Paste a customer chat and Ojaly extracts the order. You can also link your number and text our bot things like “sold 2 shirts 5000”. Every order is confirmed before it is saved.' },

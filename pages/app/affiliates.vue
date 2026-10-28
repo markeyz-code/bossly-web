@@ -58,7 +58,7 @@ onMounted(async () => {
 
 <template>
   <div class="space-y-5">
-    <PageHeader title="Refer & earn" subtitle="Share Ojaly with another student business. Earn 20% of their first payment." eyebrow="Grow together">
+    <PageHeader title="Refer & earn" subtitle="Share Ojaly with another business. Earn 20% of their first payment." eyebrow="Grow together">
       <template #actions><BaseButton variant="outline" :disabled="!affiliate.data.value" @click="share"><Share2 class="h-4 w-4" /> Share invite</BaseButton></template>
     </PageHeader>
 

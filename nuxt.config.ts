@@ -1,13 +1,8 @@
-const vercelBuild = Boolean(process.env.VERCEL);
+const isProd = process.env.NODE_ENV === 'production' || Boolean(process.env.VERCEL) || Boolean(process.env.RAILWAY_ENVIRONMENT) || Boolean(process.env.RENDER);
 const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
-const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.ojaly.org/api/v1' : 'http://localhost:4100/api/v1');
-const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://ojaly.org' : 'http://localhost:3100');
-const publicAdminUrl = process.env.NUXT_PUBLIC_ADMIN_URL || (vercelBuild ? 'https://admin.ojaly.org' : 'http://localhost:3101');
-
-if (vercelBuild) {
-  if (!/^https:\/\//.test(publicApiBase)) console.warn('[Ojaly Notice] NUXT_PUBLIC_API_BASE is recommended to be an HTTPS API URL on Vercel.');
-  if (!/^https:\/\//.test(publicAppUrl)) console.warn('[Ojaly Notice] NUXT_PUBLIC_APP_URL is recommended to be the HTTPS web origin on Vercel.');
-}
+const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (isProd ? 'https://api.ojaly.org/api/v1' : 'http://localhost:4100/api/v1');
+const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (isProd ? 'https://ojaly.org' : 'http://localhost:3100');
+const publicAdminUrl = process.env.NUXT_PUBLIC_ADMIN_URL || (isProd ? 'https://admin.ojaly.org' : 'http://localhost:3101');
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -33,11 +28,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en-NG' },
-      title: 'Ojaly — run your student business. Get a free website.',
+      title: 'Ojaly — run your business. Know your money.',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#06231A' },
-        { name: 'description', content: 'Ojaly is the business management system for Nigerian student entrepreneurs. Track profit, stock, debts and expenses — and get an auto-generated storefront for free.' },
+        { name: 'description', content: 'Ojaly is the operating system for ambitious Nigerian businesses. Track real profit, stock, debts and expenses — and turn your catalogue into a free storefront.' },
         { property: 'og:site_name', content: 'Ojaly' },
         { property: 'og:type', content: 'website' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
@@ -75,7 +70,7 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Ojaly — business, handled',
       short_name: 'Ojaly',
-      description: 'Run your student business and get a free website.',
+      description: 'Run your business, know your money and get a free website.',
       theme_color: '#06231A',
       background_color: '#FBF7EF',
       display: 'standalone',
