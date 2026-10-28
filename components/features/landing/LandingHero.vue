@@ -5,6 +5,9 @@ const auth = useAuthStore();
 
 type Slide = {
   label: string;
+  titleTop: string;
+  titleBottom: string;
+  sub: string;
   question: string;
   headline: string;
   answer: string;
@@ -17,6 +20,9 @@ type Slide = {
 const slides: Slide[] = [
   {
     label: 'The 11pm question · Profit',
+    titleTop: 'Run the business.',
+    titleBottom: 'Know the money.',
+    sub: 'Sales, stock, debts, WhatsApp orders and a free storefront — one calm system that tells you the truth, even when business is messy.',
     question: '“I made sales. So why is there no money left?”',
     headline: 'Revenue is loud. Profit is the truth.',
     answer: 'Ojaly adds up every sale, cost of goods and real expense — then shows the one number that tells you whether the business is actually working.',
@@ -27,6 +33,9 @@ const slides: Slide[] = [
   },
   {
     label: 'The 11pm question · Debts',
+    titleTop: 'Stop chasing.',
+    titleBottom: 'Start collecting.',
+    sub: 'Know who owes what, when it is due and how to ask politely. Send a reminder or a payment link without breaking the relationship.',
     question: '“Who still owes me — and how do I ask again?”',
     headline: 'Stop chasing from memory.',
     answer: 'Every debt gets a customer, a balance and a due date. Send a polite WhatsApp reminder or a Paystack link without the awkward conversation.',
@@ -37,6 +46,9 @@ const slides: Slide[] = [
   },
   {
     label: 'The 11pm question · Website',
+    titleTop: 'Your catalogue.',
+    titleBottom: 'Your website.',
+    sub: 'Add what you sell once. Publish a fast storefront with cart, checkout and Paystack. No developer, no monthly website bill.',
     question: '“I need a real website, but I can’t afford a developer.”',
     headline: 'Your catalogue is the website.',
     answer: 'Add what you sell once. Pick a template, set your colours and publish a fast storefront with cart, checkout and Paystack. No designer. No developer bill.',
@@ -47,6 +59,9 @@ const slides: Slide[] = [
   },
   {
     label: 'The 11pm question · WhatsApp',
+    titleTop: 'Paste the chat.',
+    titleBottom: 'Keep the customer.',
+    sub: 'Ojaly reads the conversation, drafts the order and updates stock, sales and receipts. You confirm; it keeps the record.',
     question: '“My orders are buried in WhatsApp. I’m scared to lose one.”',
     headline: 'Paste the chat. Keep the customer.',
     answer: 'Ojaly reads the order conversation, drafts the sale and updates stock, debts and receipts. You confirm the details; Ojaly keeps the record.',
@@ -57,6 +72,9 @@ const slides: Slide[] = [
   },
   {
     label: 'The 11pm question · Services',
+    titleTop: 'Sell anything.',
+    titleBottom: 'Run one system.',
+    sub: 'Thrift, food, salons, printing, repairs or services — record the money, the customer and the next step in one place.',
     question: '“I sell services, not products. Will this even work for me?”',
     headline: 'If money moves, Ojaly works.',
     answer: 'Salons, barbers, caterers, printers and designers can record jobs, deposits, expenses and customer balances without forcing everything into a product catalogue.',
@@ -68,9 +86,12 @@ const slides: Slide[] = [
 ];
 
 const index = ref(0);
-const paused = ref(false);
+const userPaused = ref(false);
+const hovering = ref(false);
+const focused = ref(false);
 const reducedMotion = ref(false);
 const slide = computed(() => slides[index.value]);
+const isPaused = computed(() => userPaused.value || hovering.value || focused.value);
 
 function go(delta: number) {
   index.value = (index.value + delta + slides.length) % slides.length;
@@ -80,8 +101,8 @@ function goTo(next: number) {
   index.value = next;
 }
 
-function pause() { paused.value = true; }
-function resume() { paused.value = false; }
+function pause() { hovering.value = true; }
+function resume() { hovering.value = false; }
 
 function onKeydown(event: KeyboardEvent) {
   if (event.key === 'ArrowLeft') { event.preventDefault(); go(-1); }
@@ -91,8 +112,9 @@ function onKeydown(event: KeyboardEvent) {
 let timer: ReturnType<typeof setInterval> | null = null;
 onMounted(() => {
   reducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reducedMotion.value) return;
-  timer = setInterval(() => { if (!paused.value) go(1); }, 7000);
+  timer = setInterval(() => {
+    if (!isPaused.value && !document.hidden) go(1);
+  }, 6500);
 });
 onBeforeUnmount(() => { if (timer) clearInterval(timer); });
 </script>
@@ -111,17 +133,16 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
           <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-[11px] font-semibold text-muted">Not just students · Not just boutiques</span>
         </div>
 
-        <h1 class="font-display text-[clamp(2.7rem,6.8vw,6rem)] font-bold leading-[0.91] tracking-[-0.065em]">
-          Run the business.<br>
-          <span class="relative inline-block">
-            <span class="relative z-10">Know the money.</span>
-            <span class="absolute bottom-1 left-0 z-0 h-[24%] w-full -rotate-1 bg-brand-500/80" />
-          </span>
-        </h1>
-
-        <p class="mt-5 max-w-lg text-balance text-base leading-relaxed text-muted sm:text-lg">
-          Sales, stock, debts, WhatsApp orders and a free storefront — one calm system that tells you the truth, even when business is messy.
-        </p>
+        <div :key="index" class="hero-copy">
+          <h1 class="font-display text-[clamp(2.7rem,5.5vw,5.2rem)] font-bold leading-[0.92] tracking-[-0.065em]">
+            {{ slide.titleTop }}<br>
+            <span class="relative inline-block">
+              <span class="relative z-10">{{ slide.titleBottom }}</span>
+              <span class="absolute bottom-1 left-0 z-0 h-[24%] w-full -rotate-1 bg-brand-500/80" />
+            </span>
+          </h1>
+          <p class="mt-4 max-w-lg text-balance text-base leading-relaxed text-muted sm:text-lg">{{ slide.sub }}</p>
+        </div>
 
         <div class="mt-7 flex flex-wrap gap-2 text-[11px] font-semibold text-muted" aria-label="Who Ojaly is for">
           <span v-for="type in ['Thrift & fashion', 'Food & catering', 'Salons & barbers', 'Design & print', 'Gadgets & repairs', 'Online stores']" :key="type" class="rounded-full border border-line bg-surface px-3 py-1.5">{{ type }}</span>
@@ -133,16 +154,16 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
           role="group"
           aria-roledescription="carousel"
           aria-label="Common business questions"
-          @mouseenter="pause"
-          @mouseleave="resume"
-          @focusin="pause"
-          @focusout="resume"
+          @mouseenter="hovering = true"
+          @mouseleave="hovering = false"
+          @focusin="focused = true"
+          @focusout="focused = false"
           @keydown="onKeydown"
         >
           <div class="flex items-start justify-between gap-4">
             <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600">{{ slide.label }}</p>
-            <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition hover:bg-raised hover:text-ink" :aria-label="paused ? 'Resume carousel' : 'Pause carousel'" @click="paused = !paused">
-              <PlayCircle v-if="paused" class="h-4 w-4" />
+            <button type="button" class="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition hover:bg-raised hover:text-ink" :aria-label="userPaused ? 'Resume carousel' : 'Pause carousel'" @click="userPaused = !userPaused">
+              <PlayCircle v-if="userPaused" class="h-4 w-4" />
               <Pause v-else class="h-4 w-4" />
             </button>
           </div>
