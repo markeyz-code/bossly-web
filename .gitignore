@@ -5,7 +5,7 @@ node_modules/
 # Nuxt & Build Output
 .nuxt/
 .output/
-dist/
+dist
 .vercel/
 .cache/
 *.tsbuildinfo

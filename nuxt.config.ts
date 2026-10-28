@@ -50,6 +50,7 @@ export default defineNuxtConfig({
   },
   tailwindcss: { cssPath: '~/assets/css/main.css', configPath: '~/tailwind.config.ts', viewer: false },
   routeRules: {
+    '/': { headers: { 'Cache-Control': 'no-store, max-age=0, must-revalidate' } },
     '/app/**': { ssr: false, headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
     '/receipt/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
     '/invoice/**': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
