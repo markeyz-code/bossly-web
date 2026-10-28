@@ -88,10 +88,9 @@ const slides: Slide[] = [
 const index = ref(0);
 const userPaused = ref(false);
 const hovering = ref(false);
-const focused = ref(false);
 const reducedMotion = ref(false);
 const slide = computed(() => slides[index.value]);
-const isPaused = computed(() => userPaused.value || hovering.value || focused.value);
+const isPaused = computed(() => userPaused.value || hovering.value);
 
 function go(delta: number) {
   index.value = (index.value + delta + slides.length) % slides.length;
@@ -156,8 +155,6 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer); });
           aria-label="Common business questions"
           @mouseenter="hovering = true"
           @mouseleave="hovering = false"
-          @focusin="focused = true"
-          @focusout="focused = false"
           @keydown="onKeydown"
         >
           <div class="flex items-start justify-between gap-4">
